@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh">
+<html class="theme-next pisces use-motion" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +70,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '7.1.0',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
@@ -103,7 +103,7 @@
 <meta property="og:url" content="https://stega.cn/index.html">
 <meta property="og:site_name" content="Curled">
 <meta property="og:description" content="blog">
-<meta property="og:locale" content="zh">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Curled">
 <meta name="twitter:description" content="blog">
@@ -165,7 +165,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
@@ -197,7 +197,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -225,7 +225,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -242,7 +242,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -250,9 +250,6 @@
       
     </ul>
   
-
-  
-    
 
   
 
@@ -274,6 +271,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -299,7 +299,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -332,14 +332,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-02-05 21:42:45" itemprop="dateCreated datePublished" datetime="2019-02-05T21:42:45+08:00">2019-02-05</time>
+              <time title="Created: 2019-02-05 21:42:45" itemprop="dateCreated datePublished" datetime="2019-02-05T21:42:45+08:00">2019-02-05</time>
             
 
             
@@ -354,9 +354,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-20 00:34:30" itemprop="dateModified" datetime="2019-03-20T00:34:30+08:00">2019-03-20</time>
+                <time title="Modified: 2019-03-20 00:34:30" itemprop="dateModified" datetime="2019-03-20T00:34:30+08:00">2019-03-20</time>
               
             
           </span>
@@ -366,9 +366,33 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/05/汇编语言学习心得（二）：Debug、DS寄存器、字/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/05/汇编语言学习心得（二）：Debug、DS寄存器、字/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2019/02/05/汇编语言学习心得（二）：Debug、DS寄存器、字/" class="leancloud_visitors" data-flag-title="汇编语言学习心得（二）：Debug、DS寄存器、字">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -392,25 +416,22 @@
       
         
           
-            <blockquote>
-<p>在王爽老师的《汇编语言》一书中，提到了debug这一工具。Debug是dos和windows都提供的一种程序调试工具，使用它，可以查看寄存器和内存的内容。并且可以修改，写入，执行汇编、机器指令。</p>
-</blockquote>
-<p>Win10的电脑已经不再支持command指令和debug工具，方法一是在网上下载dosbox以及debug.exe配合使用。也可以采用vmware+windowsxp的虚拟机来使用debug工具。接下来枚举一下debug的主要指令以及功能。</p>
-<p>-r 该命令用来显示、改变寄存器的内容。如 -r ax 可以改变寄存器ax的内容，也可以-rax不带空格。</p>
-<p>-d 该命令用来显示内存中的内容，默认显示左下角地址为起始位置的128个内容。后面可接地址，如-d 1000：0，则显示段地址为1000，偏移地址为0的起始地址的内容。</p>
-<p>-e 该命令用于修改内存中的内容，后接地址，格式同-d命令。</p>
-<p>-u命令可将内存中的机器指令翻译成汇编指令，默认为左下角地址所指内存。可指定内存，格式同-d命令。</p>
-<p>-t 命令可执行一条机器指令，执行的命令为CS 和IP中的地址指向的命令，后面不可指定地址。</p>
-<p>-a 命令可以向内存中以汇编指令的形式写入指令，默认为-r左下角地址，可指定地址，格式同-d命令。</p>
-<p>在写入命令时，既可以用-e直接修改内存中的机器码，也可以用-a写入汇编代码。写入内存地址后，-t执行的是CS IP中的地址，所以要先用-r命令修改CS IP为待执行地址，再使用-t执行。</p>
-<p>字由两个字节构成，所以在8086CPU中，每个字用16位寄存器储存。高位放在高地址单元，低位则放在低地址单元里面。</p>
-<p>8086CPU里面，有一个寄存器叫做DS（段寄存器），用于存放数据的段地址。CS也是段寄存器，不过为了区分，CS段寄存器专门用来存放指令，而DS存的是不可执行的数据。</p>
-<p>当执行汇编指令 mov AX,[1]时，中括号内的内容其实是当前的偏移地址，那么如何确定段地址呢？此时的段地址即为DS寄存器内存储的地址。</p>
-<p>当修改段寄存器的地址时，我们容易想到使用 MOV DS,3333H的语句。这样的操作叫做“立即寻址方式”，被传送的数据叫做立即数。但实际上这样做是非法的，因为CPU不支持直接将立即数送入段寄存器。Google给出的原因是由于立即数直接写入段寄存器这样的指令，被翻译成机器码之后将占用更多的字节，在事先规定的指令长度范围内无法存贮下这么多的内容，因此改由先写入通用寄存器，再由通用寄存器写入段寄存器的办法代替。立即数实际上是相当占地方的。只能通过间接迂回的方式。MOV AX,3333H MOV DS,AX。先将数据送入一般寄存器，再把一般寄存器的值送入段寄存器。</p>
-<p>数据从寄存器到内存地址的方式是内存地址到寄存器的逆过程，只需MOV [0],AX即可。</p>
-<p>因为8086CPU是16位结构，可以一次性传输16位数据，也就是一个字的数据。</p>
+            <p>
+              
+在王爽老师的《汇编语言》一书中，提到了debug这一工具。Debug是dos和windows都提供的一种程序调试工具，使用它，可以查看寄存器和内存的内容。并且可以修改，写入，执行汇编、机器指令。
 
+Win10的电脑已经不再支持command指令和debug工具，方法一是在网上下载dosbox以及d
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/05/汇编语言学习心得（二）：Debug、DS寄存器、字/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -470,7 +491,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -503,14 +524,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-02-04 15:29:36" itemprop="dateCreated datePublished" datetime="2019-02-04T15:29:36+08:00">2019-02-04</time>
+              <time title="Created: 2019-02-04 15:29:36" itemprop="dateCreated datePublished" datetime="2019-02-04T15:29:36+08:00">2019-02-04</time>
             
 
             
@@ -525,9 +546,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-20 00:34:48" itemprop="dateModified" datetime="2019-03-20T00:34:48+08:00">2019-03-20</time>
+                <time title="Modified: 2019-03-20 00:34:48" itemprop="dateModified" datetime="2019-03-20T00:34:48+08:00">2019-03-20</time>
               
             
           </span>
@@ -537,9 +558,33 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/04/优美的舞姿-探索正则表达式（一）：字符组、量词初步/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/04/优美的舞姿-探索正则表达式（一）：字符组、量词初步/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2019/02/04/优美的舞姿-探索正则表达式（一）：字符组、量词初步/" class="leancloud_visitors" data-flag-title="优美的舞姿--探索正则表达式（一）：字符组、量词初步">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -563,21 +608,20 @@
       
         
           
-            <p>前几天看《编译与反编译原理》，词法分析器的编写用到了正则表达式；以前写爬虫，对获取到的庞大的数据进一步地筛选，提取有用信息，也是离不开正则表达式。一直以来对正则都是一知半解，这几天，读了余晟老师写的《正则指引》，颇有心得，取其主干和精彩处总结一下，权当自己复习。</p>
-<p>正则表达式，又称为规则表达式，英语是Regular Expression，所以常常简写为RE。最早是用在unix指令sed和grep里。Grep，G、re、p，中间的re正是指正则表达式。</p>
-<p>认识正则表达式的第一步，是认识字符组。它表示在同一位置可能出现的各种字符。常常包含在一对方括号[]之间。而方括号中的内容则表示要匹配的内容。如[123]则匹配数字1，2，3。[a,b,c,d,e,f,g]则匹配字母a,b,c,d,e,f,g。</p>
-<p>那么当要匹配的范围扩大，比如要匹配所有的字母，总不能把所有的单词全部写一遍吧。我们知道，每个ASCII字符都能对应一个ASCII码。所以，我们只需要按照ASCII码的顺序并结合‘-’符号构造一个范围表达式，如[0-9]就代表所有的数字，[a-zA-Z]就代表所有的英文大小写字母。然而当‘-’符号并不是作为两个ASCII字符的连接符时，则保持原有的意思，如[-09]代表匹配数字0，9以及符号‘-’。</p>
-<p>如果我们要匹配不为A的所有字符呢？这时候用一个排除型字符组就可以解决。排除型字符组和普通字符组最大的不同是含有一个脱字符‘^’，如，不含A的所有字符可以表示为[^A]。</p>
-<p>正则表达式的字符组本质上是一个集合，所以可以进行集合的运算。如，进一步，我想匹配不为F的所有大写字母，则可以写作[A-Z-[\^F]],即从A-Z匹配到的大写字母的集合里面，进行差集运算，减掉字母F。</p>
-<p>特殊字符组：POSIX字符组。以及PCRE简记法。如[0-9]在POSIX字符组里面可以表示为[:digit:]，在PCRE里面简记为\d。常用的简记还有\s（空白字符），\w（字母字符）。</p>
-<p>而简记法字符的排除型可以用他们的大写形式来表示，如：\S表示不为空白字符的所有字符。因此，我们可以用[\s\S]、[\W\w]、[\D\d]来表示所有字符（突然想起sql注入的时候为了绕过等号采用&lt;&gt;号，原理大同小异）。有的时候还可以用’.’字符来匹配，然而点字符无法匹配换行符。</p>
-<p>一个字符组匹配一个空位的字符，那么，当我们要匹配多个字符时，如果将字符组重复写多次，未免显得太笨拙繁琐。正则表达式为我们提供了一个量词符号{}。如\d{4}代表匹配数字4次，等价于\d\d\d\d。同样，{}符号可以写成范围形式，代表匹配左闭右闭区间的范围次数，如{5,6}，则代表匹配5次或6次。有趣的是，这个区间可以单独缺少上区间或者下区间。如{5,}代表匹配不止5次，{,6}代表匹配最多6次，最少0次，但在有些语言下不适用，应该注意。</p>
-<p>同样，量词也提供了简单写法，如+符号代表匹配不止1次，等同于{1,}，*符号代表匹配大于等于0次，等同于{0,}，？则代表匹配0次或1次，等同于{0,1}。</p>
-<p>在严格匹配字符串的长度，以及要求一一相等时，应该采用^$符号，表示从字符串首匹配到尾。</p>
-<p>之前提到匹配任意字符串时，可以采用’.’符号，然而点符号并不能匹配换行符\n，除非在单行匹配模式下。同时，点号时匹配优先词，采用的是贪婪模式匹配，所以在一些情况下可能会出现问题。</p>
-<p>下一篇将探索贪婪模式与非贪婪模式匹配。</p>
-
+            <p>
+              前几天看《编译与反编译原理》，词法分析器的编写用到了正则表达式；以前写爬虫，对获取到的庞大的数据进一步地筛选，提取有用信息，也是离不开正则表达式。一直以来对正则都是一知半解，这几天，读了余晟老师写的《正则指引》，颇有心得，取其主干和精彩处总结一下，权当自己复习。
+正则表达式，又称为规则表达式，英语是
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/04/优美的舞姿-探索正则表达式（一）：字符组、量词初步/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -637,7 +681,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -670,14 +714,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-02-03 16:58:25" itemprop="dateCreated datePublished" datetime="2019-02-03T16:58:25+08:00">2019-02-03</time>
+              <time title="Created: 2019-02-03 16:58:25" itemprop="dateCreated datePublished" datetime="2019-02-03T16:58:25+08:00">2019-02-03</time>
             
 
             
@@ -692,9 +736,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-20 00:34:36" itemprop="dateModified" datetime="2019-03-20T00:34:36+08:00">2019-03-20</time>
+                <time title="Modified: 2019-03-20 00:34:36" itemprop="dateModified" datetime="2019-03-20T00:34:36+08:00">2019-03-20</time>
               
             
           </span>
@@ -704,9 +748,33 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/02/03/汇编语言学习心得（一）：CPU-寄存器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/03/汇编语言学习心得（一）：CPU-寄存器/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2019/02/03/汇编语言学习心得（一）：CPU-寄存器/" class="leancloud_visitors" data-flag-title="汇编语言学习心得（一）：CPU,寄存器">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -730,21 +798,20 @@
       
         
           
-            <p>汇编语言是怎么产生的？汇编语言是机器指令的助记符，与机器指令一一对应。而对不同的CPU来说有不同的汇编指令集。显然，机器语言虽然高效，但是难以让人理解，可读性和查错性都不强，所以才出现了中间语言——汇编语言。</p>
-<p>寄存器是CPU中存储数据的器件，一个CPU可以有多个寄存器。寄存器又有自己的代号，如AX,BX。说到数据，在内存和磁盘上，指令和数据的区别并不大，本质上都是作为二进制存储，但是CPU工作的时候，指令和数据则有不同的意义。</p>
-<p>存储器包含若干个存储单元，每个单元从0开始编号。一个单元存储8bit，也就是一个字节Byte。但是在量度存储器的容量时，常常用字节作为最小的单位。CPU在读写存储器时，是按照：寻址——选择控制——读写的顺序进行工作的。而参与这一过程的主角——三条线：地址线、数据总线、控制总线，它们的作用分别如下：</p>
-<blockquote>
-<p>地址线：CPU含有地址线的数量称为地址总线的宽度，于是寻址的范围就是2的宽度次方个存储单元。<br>数据总线：一根数据总线对应一个二进制位（1bit），8根数据总线可以传输一个字节。<br>控制总线：宽度决定CPU对外部器件的控制能力。</p>
-</blockquote>
-<p>而可寻内存单元构成的叫做CPU的内存地址空间，分别由两个字节组成：高位字节和低位字节。</p>
-<p>前面我们谈到不同的CPU对应不同的汇编指令，以及不同的寄存器数量。在这里我们着重介绍一种重要的CPU：8086CPU。</p>
-<p>8086CPU由20位地址总线组成，具有1MB寻址能力。16位结构，一次性处理传输暂存的数据位16位。内部则用两个16位地址（段地址和偏移地址）通过地址加法器合成一个20位的物理地址。合成方式为：16*段地址+偏移地址。充分体现了用两个少位单元代替多位单元的思想。同时，正因为这个物理地址一个合成的地址，所以可以有不同的段地址和偏移地址的组合方式。</p>
-<p>段地址和偏移地址是怎样暂时存储的呢？这里有两个重要的寄存器：CS寄存器和IP寄存器。前者储存段地址，称为代码段寄存器，后者储存偏移地址，称为指令指针寄存器。所以，我们基本上可以想象出执行一条指令的全过程了：CS和IP中的值送入地址加法器，计算出物理地址：16*CS+IP，然后用得到的物理地址传入输入输出控制器，通过地址总线寻找到指令的首地址，然后通过数据总线送回来，再送入指令缓冲器，这时候，我们的IP寄存器加上代码段长度的地址长度，指向下一个指令后，再执行当前指令，执行完后进入下一个循环，周而复始。</p>
-<p>由此，我们知道，读取指令，不过就是改变CS和IP的值，使物理地址指向我们想要读取的指令集。那么怎么改变CS和IP的值呢？用MOV指令可以吗？</p>
-<p>我们知道，MOV可以修改寄存器AX，BX等寄存器的值，然而，在8086CPU中，MOV指令不能直接修改CS、IP内容，因为MOV指令叫做传送指令，只能通过执行指令前完成IP加上代码段长度这一个自增过程实现间接改变IP寄存器的值。能直接修改CS,IP的指令叫做转移指令，如JMP。 格式为JMP 段地址：偏移地址。</p>
-<p>若仅仅修改IP内容，就用jmp 寄存器（AX,BX） 这一格式的语句。寄存器的值作为IP的新值。所以从某种意义上来说，jmp ax等同于mov ip ax。</p>
-
+            <p>
+              汇编语言是怎么产生的？汇编语言是机器指令的助记符，与机器指令一一对应。而对不同的CPU来说有不同的汇编指令集。显然，机器语言虽然高效，但是难以让人理解，可读性和查错性都不强，所以才出现了中间语言——汇编语言。
+寄存器是CPU中存储数据的器件，一个CPU可以有多个寄存器。寄存器又有自己的代号，如AX,
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/03/汇编语言学习心得（一）：CPU-寄存器/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -804,7 +871,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -837,14 +904,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-01-30 23:31:15" itemprop="dateCreated datePublished" datetime="2019-01-30T23:31:15+08:00">2019-01-30</time>
+              <time title="Created: 2019-01-30 23:31:15" itemprop="dateCreated datePublished" datetime="2019-01-30T23:31:15+08:00">2019-01-30</time>
             
 
             
@@ -859,9 +926,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-19 12:34:05" itemprop="dateModified" datetime="2019-03-19T12:34:05+08:00">2019-03-19</time>
+                <time title="Modified: 2019-03-19 12:34:05" itemprop="dateModified" datetime="2019-03-19T12:34:05+08:00">2019-03-19</time>
               
             
           </span>
@@ -871,9 +938,33 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/01/30/年/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/30/年/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2019/01/30/年/" class="leancloud_visitors" data-flag-title="年">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -897,17 +988,21 @@
       
         
           
-            <p>我越来越不喜欢过年。</p>
-<p>上下半年的纷忙，年前的疲累，似乎不妨碍人们把最后的力气在热闹里燃尽。西门的灯笼挂起来了，遮住了整条街的穹顶，连梧桐与黄槲的阴影都要比往日更加分明。门庭变得热闹，往日希有来往的亲朋也纷至赴这盛宴。</p>
-<p>这热闹表面上粉饰得红火，骨子里却是冷清的，冷到眼角发红，瞳孔扩张。它是三大姑嘴里发了横财锦衣夜行的某某，又是八大舅饭桌上吐出的将散未散的烟圈，是彻底忘却陈年的酒盏，终究在中年男人夹杂着咒骂的酒嗝中烟消云散。</p>
-<p>这几天小雨。</p>
-<p>一个人在家，或沉默，或翻着老物件自言自语。孩提时代不知被哪位长辈告诫，自言自语的小孩长大后会变成街上的疯子，这一点我当时确信不疑的。直到后来才知道不过是大人教小孩学会倾诉的一个计俩。只不过小时候那点心事谁都能付之衷肠，反倒是长大后自言自语的时候多了，于是我便很难分辨自己是否仍然正常。</p>
-<p>人们为什么喜欢过年，是偏爱热闹，抑或是在那推杯换盏中忘却陈年？于是那咒骂声也仿佛立马有了现代极简主义感。我翻着这些或新或旧的礼物，字迹已然不清的贺卡，瓷储蓄罐，去年收到的一幅画。科学说人们会选择性地忘掉悲伤的回忆，男人告诉你忘不掉的能借助酒精，女人说还有口红和包。我已经大半年不饮一滴酒，我想我最好还是保持清醒。</p>
-<p>比起过年，年终总结好像是个不错的替代方案。</p>
-<p>好了，我要提笔了，诸君请看。可是，从何说起呢？上半年的事我大抵已经记不清了，下半年又太过压抑。这的确是很重要的半年，始于期待与一场狂喜，结束于疲惫与怅然。我在等待了一度春秋，等到那夏露结成一颗明珠，我攥了一整颗终于在孟秋失去，再不复得。深秋初冬的忙碌是密不透风的棺材板，当我终于从那板子里脱出，也快要忘却那盛夏的光景时，我的输入法还记得，它一遍又一遍地用曾经最平常不过的字眼来鞭挞我的心，痛斥我曾轻浮与薄情;歌单记得，便签纸记得，礼品记得，空间里我曾写下的那些稚气煽情的句子，全都还记得。</p>
-<p>我于是终于还是向年妥协，斟一杯消愁的酒，就让这一年的光景全都熄灭在你迷离的醉眼里罢。</p>
-
+            <p>
+              我越来越不喜欢过年。
+上下半年的纷忙，年前的疲累，似乎不妨碍人们把最后的力气在热闹里燃尽。西门的灯笼挂起来了，遮住了整条街的穹顶，连梧桐与黄槲的阴影都要比往日更加分明。门庭变得热闹，往日希有来往的亲朋也纷至赴这盛宴。
+这热闹表面上粉饰得红火，骨子里却是冷清的，冷到眼角发红，瞳孔扩张。它是三大姑嘴里发
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/30/年/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -967,7 +1062,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1000,14 +1095,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-01-14 21:19:05" itemprop="dateCreated datePublished" datetime="2019-01-14T21:19:05+08:00">2019-01-14</time>
+              <time title="Created: 2019-01-14 21:19:05" itemprop="dateCreated datePublished" datetime="2019-01-14T21:19:05+08:00">2019-01-14</time>
             
 
             
@@ -1022,9 +1117,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-19 12:29:48" itemprop="dateModified" datetime="2019-03-19T12:29:48+08:00">2019-03-19</time>
+                <time title="Modified: 2019-03-19 12:29:48" itemprop="dateModified" datetime="2019-03-19T12:29:48+08:00">2019-03-19</time>
               
             
           </span>
@@ -1034,9 +1129,33 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/01/14/我与Lamp模式建站的恩怨情仇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/14/我与Lamp模式建站的恩怨情仇/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2019/01/14/我与Lamp模式建站的恩怨情仇/" class="leancloud_visitors" data-flag-title="我与Lamp模式建站的恩怨情仇">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1060,71 +1179,21 @@
       
         
           
-            <p>很久没有更新我的博客，前几天网站突然不能访问，在排查原因无果之后，决定初始化我的磁盘，重新搭建我的博客。我是个爱折腾的人，当然循规蹈矩地安装lamp搭建博客基本上驾轻就熟，这一次我决定解决上次建站遗留下来的几个坑：</p>
-<blockquote>
-<p>1.上次建站用的是centos自带的yum源，php5，apache2.4.6，以及mysql5，这一次我决定统一换成php7+mysql8。<br>2.网站https化。<br>3.让网站更加安全。</p>
-</blockquote>
-<p>物料：</p>
-<blockquote>
-<p>1.云服务器一台（centos系统）<br>2.Typecho博客最新稳定版安装包一个<br>3.手和脑子</p>
-</blockquote>
-<p>首先，更新系统好习惯</p>
-<pre><code>sudo yum install update
-sudo yum install upgrade
-</code></pre><p>接下来，配置防火墙<br>我的感受就是：不要图省事直接关防火墙！虽然阿里云服务器防D防扫功能已经做得很好了，但是风险还是存在的。<br>开启防火墙服务： <code>systemctl start firewalld</code><br>查看防火墙状态： <code>systemctl status firewalld</code><br>开机启动：<code>systemctl enable firewall</code></p>
-<p>Tips：systemctl的这三个指令在centos7+版本改变服务状态很有用，可以记一记。</p>
-<p>接下来，进行Apache的安装<br>这里，我偷懒就直接yum install httpd了,这时候安装下来的是centos自带的apache2.4.6版本，不过，这里的省事也给我之后造成了不小的麻烦。</p>
-<p>安装完成之后，我们开启apache服务</p>
-<pre><code>service httpd start
-</code></pre><p>查一波状态</p>
-<pre><code>service httpd status
-</code></pre><p>如果看到一个绿色的running小圆点，就说明服务搭建好了，这时候我们访问我们的公网ip，就能看见喜闻乐见的apache running 的页面了。</p>
-<p>接下来，进行mysql的安装<br>没有直接yum install，而是去官网下载了mysql最新版的rpm源<br>然后执行rpm -ivh进行安装</p>
-<p>然后它告诉你mysql的默认缺省密码的存储位置，我们直接cat拿到密码，然后</p>
-<pre><code>mysql -u -root 
-</code></pre><p>输入密码，然后重新为数据库设置新的密码。</p>
-<p>完成后，我们新建一个名为typecho的数据库</p>
-<pre><code>Create database typecho
-</code></pre><p>然后使用grant privilege赋权<br>exit～</p>
-<p>那么mysql服务就安装到这里。</p>
-<p>接下来安装php<br>Yum源提供的php是5.7版本的，但是我选择去官方源下载php7的版本，这里安装方式不再赘述，网上一搜一大把。</p>
-<p>下载typecho<br>去typecho官方网站wget下载最新稳定版安装包，tar解压，再把build文件夹里面的东西mv到/var/www/html 目录下。</p>
-<p>这时候，访问公网ip，看到安装程序，一切正常。</p>
-<p>我们的坑正式来了。</p>
-<p>第一个坑：连不上数据库</p>
-<p>数据库创建了，死活连不上，让你检查配置。<br>我们打开myql数据库</p>
-<pre><code>use mysql;
-select user,plugin from user ;
-</code></pre><p>我们可以看到，列出来的用户里面，加密方式为caching_sha2_password<br>Typecho默认数据库连接不支持sha2加密方式，我们改为native加密模式</p>
-<pre><code>ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;
-</code></pre><p>然后修改密码</p>
-<p>第一个坑顺利解决</p>
-<p>安装完网站，进后台，进行各种设置，这时候，看到我们的域名<br><a href="http://wutongdeng.cn" target="_blank" rel="noopener">http://wutongdeng.cn</a><br>作为一名资深强迫症患者，chrome和火狐再给我丢一个不安全，就十分难受。<br>不用说，https化。<br>上次搭建因为mysql版本问题没能成功解决（一个很奇怪的报错条件）<br>开始。<br>我首先选择的是certbot，一个免费证书颁发网站（白嫖党上线）。<br>网站虽然是英文的，但是有点英语基础安装起来没有困难，况且每一步的安装命令都给了，我们ctrl c ctrl v就能解决（额好吧，linux应该shift insert）。抱着这种心态，一路配置下去，突然卡在了</p>
-<pre><code>sudo yum install python2-certbot-apache
-</code></pre><p>这一步上。<br>安装的过程始终报错，后来才发现是python版本冲突的问题，这时候我想都没想干了一件蠢哭自己的事情</p>
-<pre><code>rpm -qa|grep python|xargs rpm -e --allmatches --nodeps
-whereis python|xargs rm -fr
-</code></pre><p>然后我们再<code>whereis python</code><br>没有回显，说明python卸载干净了，我们再高高兴兴地sudo yum install python2-certbot-apache<br>这时候，屏幕显示，yum不可用了。<br>网上一查，yum和python有千丝万缕的联系，删除了python，yum就不能正常使用。<br>喵喵喵？一个基于yum仓库，一个基于pip仓库，你俩怎么就有py关系了？<br>虽然不服，还是接受了事实，决定把yum和python都删得干干净净然后重新安装。<br>方法是去阿里云，163,以及ustc或者清华的镜像站去找rpm源，方式也是wget +rpm<br>有依赖关系的要放在一块儿安装。<br>恢复之后，sudo yum install python2-certbot-apache成功，然后接着</p>
-<pre><code>yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
-</code></pre><p>这时候，系统提示，找不到yum-config-manager。<br>网上找了大部分方法都没有解决这个问题，我干脆就直接把虚拟机上同版本的centos系统里的yum-config-manager拷贝过来。<br>再执行命令，成功。</p>
-<p>然后<code>sudo certbot --apache</code></p>
-<p>按照提示配置证书，这时候配置完了之后，又回显失败了。<br>排错了很久也没有找到原因（感觉可能和我卸载yum和pip重装有关系）</p>
-<p>我再次投向了腾讯爸爸的怀抱。</p>
-<p>登录腾讯云平台，申请ssl证书，按照它的步骤走，什么放密钥在根目录，十分清晰明了。<br>认证很快，邮件通知，然后到平台上下载你的证书文件<br>进入/etc/httpd/conf.d 修改ssl.conf文件，把里面证书文件的缺省名称换为你的证书文件的位置，并且正确放置证书。<br>重启apache服务，这时候我们可以看到网站已经能够https访问了，但是仍然能够以http的方式访问，显然不够完美。<br>我们修改/etc/httpd/conf 里面的http.conf 文件，把网站根目录的overwrite功能打开（网上大部分的教程都是rewrite，但我死活没有找到，可能apache的版本导致的）<br>这时候，我们利用rewrite功能在根目录写一个.htaccess文件<br>如下：</p>
-<pre><code>&lt;IfModule mod_rewrite.c&gt;
-Options +FollowSymlinks -Multiviews
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
-&lt;/IfModule&gt;
-</code></pre><p>文件会监听80端口，并且301重定向到https的网站，重启apache服务，输入http的域名，成功定向到https的域名。<br>至此，https化成功。</p>
-<p>那么如何让你的博客更加安全呢？为此，我做了以下几个改变：<br>1.改变网站后台文件地址（名称需要非常复杂），并且设置ip白名单。<br>2.网站目录重命名，并且apache配置禁止访问<br>3.全站开启静态化。<br>4.伪造了一个假的admin页面，用于愚弄脚本小子们。（之后想进一步学习蜜罐陷阱的布置方法，也算是开了一个小头了吧。）</p>
-<p>2019年1月14日<br>傍晚</p>
+            <p>
+              很久没有更新我的博客，前几天网站突然不能访问，在排查原因无果之后，决定初始化我的磁盘，重新搭建我的博客。我是个爱折腾的人，当然循规蹈矩地安装lamp搭建博客基本上驾轻就熟，这一次我决定解决上次建站遗留下来的几个坑：
 
+1.上次建站用的是centos自带的yum源，php5，apache2.4.6，以
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/14/我与Lamp模式建站的恩怨情仇/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1184,7 +1253,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1217,14 +1286,14 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2018-11-19 01:16:40" itemprop="dateCreated datePublished" datetime="2018-11-19T01:16:40+08:00">2018-11-19</time>
+              <time title="Created: 2018-11-19 01:16:40" itemprop="dateCreated datePublished" datetime="2018-11-19T01:16:40+08:00">2018-11-19</time>
             
 
             
@@ -1239,9 +1308,9 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-19 12:28:10" itemprop="dateModified" datetime="2019-03-19T12:28:10+08:00">2019-03-19</time>
+                <time title="Modified: 2019-03-19 12:28:10" itemprop="dateModified" datetime="2019-03-19T12:28:10+08:00">2019-03-19</time>
               
             
           </span>
@@ -1251,9 +1320,33 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2018/11/19/旧曾谙/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/19/旧曾谙/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2018/11/19/旧曾谙/" class="leancloud_visitors" data-flag-title="旧曾谙">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1277,15 +1370,20 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
       
         
           
-            <p>北京的冬天总是来得很早。故乡的旧时光里，秋凉一定是伴着满城花香而来，知了的噤声渐默，秋天消逝，以黄叶在风中缓缓下坠的姿态离去。北京的秋却截然不同：它在几阵凌冽的风席掠后逃逸，甚至来不及施舍一场薄雪留下脚印痕。</p>
-<p>暖气是北京在冬天里得以与南方抗衡的最后的倔强。虽然免于寒冷的侵袭，本来干燥的空气，因此更加拧不出一点水来。我烦热极了，终于在某一天的夜幕里驱车驶出了学校大门，我没有方向，往拥挤的人群里骑，往最繁华的商业区骑，往最冷清的废草坪骑，累了便回去。</p>
-<p>行过许多熟悉的地方，突然想起一年前每个初冬的夜晚，我曾在这座天桥上面对着这座城市的川流不息漫唱，这块儿河边的树林里我曾经录过歌，我受冻而颤抖的声音与风声巧妙地合拍。地点，骑车的人和他的行为，一切仿佛都没有变过，就好像我重复这一切，我就能一步穿越回去年的今天。</p>
-<p>但我不愿重复。这一年来的种种，并不因我的一厢情愿而抹去。所以有时幻想，回忆如何不能像这座城市的秋天一般，在北风卷地的势不可挡里，如同百草一般消逝。这固然是不现实的，即使我挫骨扬灰从世界的账本里清零，我生前的种种善恶，也终将成为促成世界大风球的蝴蝶效应的因子。</p>
-<p>遗憾的是，没能走过所有熟悉的地点，我的肢体告诉我它已然疲累。若我还是一年前的我，一定会感到意外的。体能不会说谎，岁月也是。人生挂历的十位在悄然翻页，我也无颜去争辩自己是否还是十年前的少年。</p>
-<p>驱车返校的路比来时更加冷清，我在荒凉里逆行，在繁华里逆行，所以才显得与这个世界格格不入。我看到了更多的东西，灯火零星的路边，相拥取暖的恋人，烂醉如泥的男人，手里购物袋装着满满喜悦的女人。世界热闹起来了，寒冷赐予我的锋芒终于刺进了温热的棉花糖里，在狂欢的泥潭里慢慢融化。与这座城市上空所有无疾而终的水汽一起，成了凝华在我心窗上不化的雾凇。</p>
-<p>2018.11.19 夜</p>
-
+            <p>
+              北京的冬天总是来得很早。故乡的旧时光里，秋凉一定是伴着满城花香而来，知了的噤声渐默，秋天消逝，以黄叶在风中缓缓下坠的姿态离去。北京的秋却截然不同：它在几阵凌冽的风席掠后逃逸，甚至来不及施舍一场薄雪留下脚印痕。
+暖气是北京在冬天里得以与南方抗衡的最后的倔强。虽然免于寒冷的侵袭，本来干燥的空气，因此更加
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/19/旧曾谙/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1345,7 +1443,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
       <meta itemprop="description" content="blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1378,14 +1476,14 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2018-10-31 10:40:16" itemprop="dateCreated datePublished" datetime="2018-10-31T10:40:16+08:00">2018-10-31</time>
+              <time title="Created: 2018-10-31 10:40:16" itemprop="dateCreated datePublished" datetime="2018-10-31T10:40:16+08:00">2018-10-31</time>
             
 
             
@@ -1400,9 +1498,9 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-03-19 12:25:59" itemprop="dateModified" datetime="2019-03-19T12:25:59+08:00">2019-03-19</time>
+                <time title="Modified: 2019-03-19 12:25:59" itemprop="dateModified" datetime="2019-03-19T12:25:59+08:00">2019-03-19</time>
               
             
           </span>
@@ -1412,9 +1510,33 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2018/10/31/壁炉与梦境/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/31/壁炉与梦境/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
+          
+            <span id="/2018/10/31/壁炉与梦境/" class="leancloud_visitors" data-flag-title="壁炉与梦境">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Views: </span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1438,24 +1560,25 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
       
         
           
-            <p>我合上电脑，已是凌晨两点。</p>
-<p>数不清这是两周来多少次熬到夜深，但对于一个迟睡的人最大的幸运莫过于次日早晨无事，不必早起。</p>
-<p>我是一个不能早起的人，是一个把自然醒奉为圭臬的人。</p>
-<p>不知觉里翻身惊破了我的梦，看了看时间已是9点。</p>
-<p>惺忪里消去一夜里手机产生的红点，看见一个app推送了这么一句诗词:</p>
-<blockquote>
-<p>风卷江湖雨暗村，四山声作海涛翻。<br>溪柴火软蛮毡暖，我与狸奴不出门。</p>
-</blockquote>
-<p>大概意思就是外面风雨大作，我在家里什么都不做，围着火炉盖着小被子撸猫。</p>
-<p>不禁艳羡起古人来，江南的油纸伞势必禁不住狂风骤雨的洗礼，所以从政的不用舟车劳顿四处转徙，商人可以在自家门前挂上一块今日无事的牌匾，若是在隆冬，壁炉就成了所有人共同的精神介质。</p>
-<p>壁炉绝对是一个跨越了国界交融了文化的神奇之物。我向来不太爱听欧美的流行歌曲，总觉得是单纯的喧闹，又不如西方摇滚喧闹得有血有肉。但《safe&amp;sound》和其mv着实让我感觉惊艳美好，大概也是因为其中的壁炉。不管外面怎样荒凉，炉火与吉他声都温暖了整个木屋。</p>
-<p>这时候又想起我惊破的那个梦来，大概是我遇到了一位很早的故友，我跟着她在都市的夜色下狂奔，她是如此地快速以至于我不能望其项背，最终在霓虹的末端不见了她的身影。</p>
-<p>不太清楚梦的寓意，大概于我的壁炉，又是另外一种人生选择。</p>
-<p>好奇心驱使下在百度上搜索了这个诗句，发现是放翁的《十一月四日风雨大作》其一。其二是”夜阑卧听风吹雨”，”两作都表达了作者报国无门的忧愤心情”。</p>
-<p>我好长时间没说出话来。</p>
-<p>10月31日 晨</p>
+            <p>
+              我合上电脑，已是凌晨两点。
+数不清这是两周来多少次熬到夜深，但对于一个迟睡的人最大的幸运莫过于次日早晨无事，不必早起。
+我是一个不能早起的人，是一个把自然醒奉为圭臬的人。
+不知觉里翻身惊破了我的梦，看了看时间已是9点。
+惺忪里消去一夜里手机产生的红点，看见一个app推送了这么一句诗词:
 
+风卷江湖雨
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/10/31/壁炉与梦境/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1526,6 +1649,8 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/35803206?s=460&v=4/" alt="Curled">
+            
               <p class="site-author-name" itemprop="name">Curled</p>
               <div class="site-description motion-element" itemprop="description">blog</div>
           </div>
@@ -1538,7 +1663,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -1553,6 +1678,43 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://site.douban.com/curled/" title="豆瓣 &rarr; https://site.douban.com/curled/" rel="noopener" target="_blank"><i class="fa fa-fw fa-douban"></i>豆瓣</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://zhihu.com/people/curled" title="知乎 &rarr; https://zhihu.com/people/curled" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>知乎</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/liupuchun" title="GitHub &rarr; https://github.com/liupuchun" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
           
 
           
@@ -1583,7 +1745,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1595,7 +1757,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -1603,7 +1765,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.0</div>
 
 
 
@@ -1625,6 +1787,8 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
@@ -1632,6 +1796,13 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 
     
 
+    
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cb750b9d27593d6" async="async"></script>
+</div>
+
+      </div>
     
   </div>
 
@@ -1691,7 +1862,9 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
   
 
 
-  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
 
 
 
@@ -1710,6 +1883,36 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'xIvikg2Bmn493wiDfN9qhg6C-gzGzoHsz',
+    appKey: 'kxK7yLYV2t3ewnPjVbpjrtOm',
+    placeholder: '我寄你的信，总要送往邮局，不喜欢放在街边的绿色邮筒中，我总疑心那里会慢一点',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
 
 
 
@@ -1719,6 +1922,74 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 
 
   
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'bKCXsmSGAcs8DnsWSqcXk48K-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'bKCXsmSGAcs8DnsWSqcXk48K-gzGzoHsz',
+                'X-LC-Key': 'FjUc3wa0OtVPTcjGoEUubqtF',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 
