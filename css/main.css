@@ -1825,7 +1825,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #04ff00;
+  background: #98fb30;
 }
 .feed-link,
 .chat {
@@ -2586,15 +2586,15 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("https://s2.ax1x.com/2019/06/24/ZE9p38.jpg");
+  background: url("https://s2.ax1x.com/2019/06/24/ZECdJ0.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
 }
 .main-inner {
-  background: #fff;
-  opacity: 0.8;
+  background: #f8f8f8;
+  opacity: 0.9;
 }
 .header-inner {
   opacity: 0.8;
