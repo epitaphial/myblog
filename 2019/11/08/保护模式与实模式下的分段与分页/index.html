@@ -96,17 +96,28 @@
 
 
 
-  <meta name="description" content="blog">
-<meta name="keywords" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Curled">
-<meta property="og:url" content="https://lpc.wiki/archives/index.html">
+  <meta name="description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即： $$2^{20}=1048576$$ 由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：$$物">
+<meta name="keywords" content="os">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实模式与保护模式下的分段与分页">
+<meta property="og:url" content="https://lpc.wiki/2019/11/08/保护模式与实模式下的分段与分页/index.html">
 <meta property="og:site_name" content="Curled">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即： $$2^{20}=1048576$$ 由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：$$物">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLE7t.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLknA.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLmh8.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLiXd.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLC1e.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLP6H.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLA0I.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLZAP.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLetf.png">
+<meta property="og:updated_time" content="2019-11-09T05:12:52.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Curled">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="实模式与保护模式下的分段与分页">
+<meta name="twitter:description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即： $$2^{20}=1048576$$ 由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：$$物">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/11/09/MeLE7t.png">
 
 
 
@@ -114,7 +125,7 @@
 
   
   
-  <link rel="canonical" href="https://lpc.wiki/archives/">
+  <link rel="canonical" href="https://lpc.wiki/2019/11/08/保护模式与实模式下的分段与分页/">
 
 
 
@@ -124,7 +135,7 @@
   };
 </script>
 
-  <title>Archive | Curled</title>
+  <title>实模式与保护模式下的分段与分页 | Curled</title>
   
 
 
@@ -172,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,7 +244,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -264,19 +275,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -330,397 +328,384 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lpc.wiki/2019/11/08/保护模式与实模式下的分段与分页/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Curled">
+      <meta itemprop="description" content="blog">
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/04/18/ESuhtS.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Curled">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">实模式与保护模式下的分段与分页
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-11-08 20:41:01" itemprop="dateCreated datePublished" datetime="2019-11-08T20:41:01+08:00">2019-11-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-11-09 13:12:52" itemprop="dateModified" datetime="2019-11-09T13:12:52+08:00">2019-11-09</time>
+              
+            
+          </span>
+
           
-        
-        Um..! 14 posts in total. Keep on posting.
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/08/保护模式与实模式下的分段与分页/" itemprop="url">
             
-              <span itemprop="name">实模式与保护模式下的分段与分页</span>
             
-          </a>
-        
-      </h2>
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/11/08/保护模式与实模式下的分段与分页/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/08/保护模式与实模式下的分段与分页/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-08T20:41:01+08:00" content="2019-11-08">
-          11-08
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
+          
 
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/22/DVWA部分WP/" itemprop="url">
-            
-              <span itemprop="name">DVWA实验wp</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-22T22:38:12+08:00" content="2019-10-22">
-          10-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/16/2019网络与信息安全领域专项赛wp/" itemprop="url">
-            
-              <span itemprop="name">2019网络与信息安全领域专项赛wp</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-16T01:45:54+08:00" content="2019-08-16">
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。</p>
+<h2 id="8086"><a href="#8086" class="headerlink" title="8086"></a>8086</h2><p>Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即：</p>
+<p>$$<br>2^{20}=1048576<br>$$</p>
+<p>由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：<br>$$<br>物理地址 = 段基址&lt;&lt;4+偏移地址<br>$$<br>8086寄存器组包括：</p>
+<p>主寄存器：</p>
+<ul>
+<li>AX（累加器），有高八位AH和低八位AL</li>
+<li>BX（基址寄存器），有高八位BH和低八位BL</li>
+<li>CX（计数寄存器），有高八位CH和低八位CL</li>
+<li>DX（数据寄存器），有高八位DH和低八位DL</li>
+</ul>
+<p>变址寄存器：</p>
+<ul>
+<li>SI（源变址寄存器）</li>
+<li>DI（目的变址寄存器）</li>
+<li>BP（基址指针寄存器）</li>
+<li>SP（堆栈指针寄存器）</li>
+</ul>
+<p>程序计数器：</p>
+<ul>
+<li>IP（指令指针寄存器）</li>
+</ul>
+<p>段寄存器：</p>
+<ul>
+<li>CS（代码段寄存器）</li>
+<li>DS（数据段寄存器）</li>
+<li>ES（附加段寄存器）</li>
+<li>SS（堆栈段寄存器）</li>
+</ul>
+<p>状态寄存器：</p>
+<ul>
+<li>PWD（标志寄存器）</li>
+</ul>
+<h2 id="实模式"><a href="#实模式" class="headerlink" title="实模式"></a>实模式</h2><p>实模式是早期8086CPU唯一的操作模式，以及80286后80x86系兼容CPU的操作模式，实模式的特性是一个20比特的区段存储器地址空间。</p>
+<p>所有的x86CPU都是在实模式下引导，来确保传统操作系统的兼容性。为了使用保护模式的特性，要由程序主动地切换到保护模式。</p>
+<h2 id="保护模式"><a href="#保护模式" class="headerlink" title="保护模式"></a>保护模式</h2><p>保护模式是一种80286系列和之后的x86兼容CPU的运行模式。保护模式有一些新的特性，如存储器保护、标签页系统以及硬件支持的虚拟内存。</p>
+<p>随着CPU的发展，CPU地址线从20根增加到32根。由此，可访问的内存空间变为4GB，寄存器位数变为32位。实模式下内存地址计算方式不再有效，所以需要实现更大地址空间，更灵活安全的寻址。</p>
+<p>在32位保护模式下，状态和控制寄存器除了EFLAGS和EIP，还有四个32位控制寄存器，分别为：CR0、CR1、CR2、CR3。</p>
+<p><strong>CR0：</strong></p>
+<ul>
+<li>PE 保护允许位：PE = 1时，启用保护模式，否则启用实模式。</li>
+<li>MP 监控协处理位：与第3位TS（任务转换位）一起决定。MP = 1时启用TS标志控制等待/FWAIT指令的交互。 </li>
+<li>TS 任务转换位：当一个任务转换完成后，自动置1。当TS为1时，协处理器被禁用。</li>
+<li>EM 模拟协处理器位：若EM为1，则协处理器禁用。</li>
+<li>ET 处理器拓展类型位：保存处理器拓展类型信息。</li>
+<li>PG 分页标志位：当PG为1时开启分页，否则禁止分页。在开启这个标志前应确保已开启PE标志</li>
+<li>WP 写保护标志位 WP = 1时，处理器禁止0特权级程序向用户级只读页面执行写操作。</li>
+</ul>
+<p><strong>CR1：</strong></p>
+<p>未定义的控制寄存器，供将来的处理器使用。若尝试访问，CPU会抛出#UD异常。</p>
+<p><strong>CR2：</strong></p>
+<p>页故障线性地址寄存器，保存最后一次出现页故障的全32位线性地址。</p>
+<p><strong>CR3:</strong></p>
+<p>页目录基址寄存器，保存页目录表的物理地址，页目录表首地址总是以4KB为边界对齐，因此低12位应该恒为0。</p>
+<p><strong>CR0、CR2、CR3对于分页机制的意义：</strong></p>
+<p>系统在刚上电时，处理器被复位为PE = 0、PG = 0（实模式状态），以允许引导代码在启用分段和分页机制前能初始化这些寄存器和数据结构。</p>
+<p>PE = 1、PG = 0时，此时为保护模式不开启分页的情况，线性地址 = 物理地址。</p>
+<p>PE = 1、PG = 1时，此时为保护模式下的分页模式。</p>
+<p>CR2用于报告页异常信息，异常处理程序可以根据CR2的内容确定哪一个页面引发了异常。</p>
+<p>CR3又叫做PDBR，存放页目录的物理地址。</p>
+<h2 id="正片开始"><a href="#正片开始" class="headerlink" title="正片开始"></a>正片开始</h2><h3 id="实模与保护模式下的逻辑地址"><a href="#实模与保护模式下的逻辑地址" class="headerlink" title="实模与保护模式下的逻辑地址"></a>实模与保护模式下的逻辑地址</h3><p>实模式下的逻辑地址一般是这样的形式：</p>
+<p><code>16 bits 段寄存器：16 bits 段内偏移</code></p>
+<p>而32位保护模式下的逻辑地址一般是这样的形式：</p>
+<p><code>16 bits 段选择子：32 bits 段内偏移</code></p>
+<h3 id="保护模式下的分段"><a href="#保护模式下的分段" class="headerlink" title="保护模式下的分段"></a>保护模式下的分段</h3><h4 id="段选择子"><a href="#段选择子" class="headerlink" title="段选择子"></a>段选择子</h4><p>在保护模式下，原来实模式16位的段寄存器不再存储段基地址，而是称为段选择器（段选择子），其中高13位（index）为指向段描述符表的索引。TI（Table Indicator）用于标识描述符表的类型，0代表GDT，1代表LDT。RPL定义了请求的特权级别，从0~3，0为最高权限，3是最低权限。</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLE7t.png" alt="MeLE7t.png"></p>
+<h4 id="GDT（全局描述符表）"><a href="#GDT（全局描述符表）" class="headerlink" title="GDT（全局描述符表）"></a>GDT（全局描述符表）</h4><p>全局描述符表是用于界定不同内存区域特征的数据结构，它位于内存中。它的每一个条目描述及规定了不同内存分区的特征，如基地址、大小、访问权限、可执行、可写等，每一个条目又称为段描述符，下图为GDT中的一个描述符：</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLknA.png" alt="MeLknA.png"></p>
+<p>访问GDT时，需要用到段选择子和段偏移值。首先处理器使用段选择子为索引查找GDT的条目，当成功查找到后，处理器做一系列检查，包括段偏移值尝试访问的区间是否在次内存分段内，以及分级保护域的权限（是否有权访问）。</p>
+<p><strong>其中，第8位到第15位作为段描述符的访问控制字节，分别对应：</strong></p>
+<ul>
+<li>Type 段类型</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLmh8.png" alt="MeLmh8.png"></p>
+<ul>
+<li>S（DT） 描述符类型</li>
+</ul>
+<p>S = 0时表示系统段描述符，S = 1时表示数据或代码段描述符。</p>
+<ul>
+<li>DPL 描述符特权级</li>
+</ul>
+<p>Ring 0-3。</p>
+<ul>
+<li>P 段存在标志</li>
+</ul>
+<p><strong>其中，第16到第23位为段描述符的粒度字节，分别对应：</strong></p>
+<ul>
+<li>Limit 段限长</li>
+</ul>
+<p>在这个字节中的高四位，和段描述符中其他的低16位一起组成20位长。</p>
+<ul>
+<li>G 粒度</li>
+</ul>
+<p>当G = 0时，则段限长的单位为字节，20位最多表示1MB。若此时限长为0，则可以表示段长度为1个字节，即可以存储1字节内容；</p>
+<p>当G = 1时，段长度的单位为4KB，20位可以表示4GB。若此时限长为0，则可以表示段长度为4KB，即可以存储4KB内容。</p>
+<ul>
+<li>D/B 默认操作大小/默认栈指针大小和/或上界限标志</li>
+</ul>
+<p>对于32位代码和数据段，该标志位应该总是为1；对于16为代码和数据段，该标志应该总是为零。</p>
+<ul>
+<li>A 可用和保留位</li>
+</ul>
+<p>可供系统软件使用，而位21为保留位（图中灰色部分），应该总是为零。</p>
+<p>另外，在实模式下，段基址左移4位拓展为20位，所以必然是0x10（十进制的16）的倍数。保护模式下却不然，段基地址长度为32位，无需拓展，自然也不用对齐。</p>
+<h4 id="GDTR"><a href="#GDTR" class="headerlink" title="GDTR"></a>GDTR</h4><p>GDT是位于内存中的数据结构，通过段选择子访问GDT表条目可以得到段描述符，并进一步得到基地址。那么该怎么访问GDT呢？</p>
+<p>32位CPU提供了一个48位寄存器——GDTR寄存器，高32位用于存储GDT的基址，低16位用于存放GDT的限长。</p>
+<h4 id="分段机制总结"><a href="#分段机制总结" class="headerlink" title="分段机制总结"></a>分段机制总结</h4><p>通过以上三种结构，我们可以理解保护模式下的分段机制：</p>
+<p>1.根据指令性质确定段寄存器，如转移指令地址在代码段，而取数据指令在数据段。<br>2.通过GDTR找到GDT的基地址，用段选择子作为索引索引出段描述符，以及段基址。<br>3.越界检查、越权检查。<br>4.段描述符的基地址加上段偏移地址即为线性地址（当未启用保护模式下的分页机制时，线性地址等价于物理地址）。</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLiXd.png" alt="MeLiXd.png"></p>
+<h3 id="保护模式下的分页"><a href="#保护模式下的分页" class="headerlink" title="保护模式下的分页"></a>保护模式下的分页</h3><h4 id="页"><a href="#页" class="headerlink" title="页"></a>页</h4><p>在32位x86保护模式下，线性地址被分割成4KB大小的页面。物理地址也同样被分割为4KB固定大小的块，称为页框（页帧），页面可以映射到页框里。</p>
+<h4 id="页表"><a href="#页表" class="headerlink" title="页表"></a>页表</h4><p>页表是一种特殊的数据结构，放在系统空间的页表区，存放逻辑页于物理页帧的对应关系。每一个进程都拥有一个自己的页表，PCB表中有指针指向页表。</p>
+<p>通常页表是一个4KB的数据结构，每一个页表项为4B，所以每个页表中可以存储1024个页表项。页表项的结构如下图：</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLC1e.png" alt="MeLC1e.png"></p>
+<p>其中，高20位为页基地址。因为每一页为4KB，页面和页帧都要以4KB对齐。4KB=0x1000字节。所以在计算的时候，要将页基地址乘以0x1000（即左移12位），再加上偏移地址，得到物理地址。</p>
+<p>其他字段分别代表的含义为：</p>
+<ul>
+<li>P</li>
+</ul>
+<p>P = 1时，该页存在。</p>
+<ul>
+<li>R/W</li>
+</ul>
+<p>该字段为1的时候，代表可写；否则只读。在CR0标志位设置成实模式时不起效。</p>
+<ul>
+<li>U/S</li>
+</ul>
+<p>该字段为1时，代表页面为用户态页面，否则为内核态页面。用户模式的代码不能读写内核态页面。</p>
+<ul>
+<li>PWT/PCT</li>
+</ul>
+<p>CPU保留使用</p>
+<ul>
+<li>A</li>
+</ul>
+<p>由CPU设置，该字段为1时，代表该页被访问过。</p>
+<ul>
+<li>D</li>
+</ul>
+<p>该字段为1时，代表该页被写过。</p>
+<ul>
+<li>Avail</li>
+</ul>
+<p>留作内核使用。</p>
+<h4 id="页目录"><a href="#页目录" class="headerlink" title="页目录"></a>页目录</h4><p>对于4GB的内存空间，倘若按照4KB每页进行分页，那么一共可以分为1024个页面，刚好作为一个页表的所有页表项。每个页表项对应32位（4B）的空间，则存储一张这样的页表共需要4MB的空间。</p>
+<p>倘若物理内存是GB为单位，4MB看起来并不是很大。但若是运行在只有16MB大小地址空间下，4MB则是一个相对比较大的开销。所以我们引入了多级页表的概念：页目录——可以看成是页表的页表。</p>
+<p>所以，页目录的每一个表项应该包含页表的基地址，页目录项如下图所示：</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLP6H.png" alt="MeLP6H.png"></p>
+<p>可以看到，与页表项很相似。第12位至第31位包含了页表的基地址。</p>
+<p>那么我们来计算一下，一个页目录包含1024个页目录项，每个页目录项为4B，则页目录需要占用4KB的空间。对于4GB的线性地址，刚好可以对应1024个页表+一个页目录，那么总共需要的空间为4MB+4KB。这岂不是比原来的4MB还大了吗？其实并不然，在一个进程中，实际使用的内存远没有4GB这么大，在两级页表的映射下，我们只需要映射需要的地址，大大简省了内存。</p>
+<h4 id="CR3寄存器"><a href="#CR3寄存器" class="headerlink" title="CR3寄存器"></a>CR3寄存器</h4><p><img src="https://s2.ax1x.com/2019/11/09/MeLA0I.png" alt="MeLA0I.png"></p>
+<p>CR3寄存器的结构如上图，它是一个32位寄存器。12位到31位包含了页目录的基地址。</p>
+<h4 id="分页机制总结"><a href="#分页机制总结" class="headerlink" title="分页机制总结"></a>分页机制总结</h4><p>了解了页目录、页表和CR3寄存器的概念后，线性地址映射到物理地址的过程就很清晰了。</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLZAP.png" alt="MeLZAP.png"></p>
+<p>如上图所示。线性地址是一个32位的地址，高10位代表在页目录中的偏移（10位刚好对应页目录中1024个页目录项），中间10位代表在页表中的偏移（同理，10位代表页表中1024个页表项的偏移），低12位代表页内偏移。</p>
+<p>所以，从线性地址转换为物理地址的具体步骤如下：</p>
+<ul>
+<li>首先从CR3寄存器中取得页目录的基地址（20位，拓展成32位）。</li>
+<li>以线性地址的高10位为索引，取得对应的页目录项，并进一步取得页表的基地址（20位，拓展为32位）。</li>
+<li>以线性地址的中间10位为索引，在页表中取得相应的页表项，并进一步取得页的基地址（20位，拓展为32位）。</li>
+<li>将该基地址左移12位，并加上线性地址的低12位（对应页内偏移地址），得到物理地址。</li>
+</ul>
+<p>所以，在32位开启了分段与分页机制的保护模式下，由逻辑地址到物理地址的全流程如下：</p>
+<p><img src="https://s2.ax1x.com/2019/11/09/MeLetf.png" alt="MeLetf.png"></p>
+<p><strong>因作者水平有限，如有谬误，还望指出。</strong></p>
+<hr>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/Intel_8086" target="_blank" rel="noopener">维基百科-Intel 8086</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/真實模式" target="_blank" rel="noopener">维基百科-实模式</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%BF%9D%E8%AD%B7%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener">维基百科-保护模式</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/全局描述符表" target="_blank" rel="noopener">维基百科-GDT</a> </li>
+<li><a href="https://zhuanlan.zhihu.com/p/42309472" target="_blank" rel="noopener">知乎-CPU的实模式和保护模式(一)</a></li>
+<li><a href="http://0x4c43.cn/2018/0617/ia32-memory-model-and-address-mapping/" target="_blank" rel="noopener">IA-32 内存模型与地址映射</a></li>
+<li><a href="https://www.cnblogs.com/liubiyonge/p/9350494.html" target="_blank" rel="noopener">x86的控制寄存器CR0,CR1,CR2,CR3</a></li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/04/SQLstore/" itemprop="url">
-            
-              <span itemprop="name">一道存储过程绕过的SQL注入题</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-04T21:28:23+08:00" content="2019-07-04">
-          07-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/28/lpc的pwnable-kr日记-2/" itemprop="url">
-            
-              <span itemprop="name">lpc的pwnable.kr日记(2)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-28T16:36:55+08:00" content="2019-06-28">
-          06-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/27/lpc的pwnable日记-1/" itemprop="url">
-            
-              <span itemprop="name">lpc的pwnable.kr日记(1)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-27T20:12:37+08:00" content="2019-06-27">
-          06-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/23/2019信安国赛部分writeup/" itemprop="url">
-            
-              <span itemprop="name">2019信安国赛部分wp</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-23T00:21:13+08:00" content="2019-04-23">
-          04-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/02/05/汇编语言学习心得（二）：Debug、DS寄存器、字/" itemprop="url">
-            
-              <span itemprop="name">汇编语言学习心得（二）：Debug、DS寄存器、字</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-05T21:42:45+08:00" content="2019-02-05">
-          02-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/02/04/优美的舞姿-探索正则表达式（一）：字符组、量词初步/" itemprop="url">
-            
-              <span itemprop="name">优美的舞姿--探索正则表达式（一）：字符组、量词初步</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-04T15:29:36+08:00" content="2019-02-04">
-          02-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/02/03/汇编语言学习心得（一）：CPU-寄存器/" itemprop="url">
-            
-              <span itemprop="name">汇编语言学习心得（一）：CPU,寄存器</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-03T16:58:25+08:00" content="2019-02-03">
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/os/" rel="tag"># os</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/22/DVWA部分WP/" rel="next" title="DVWA实验wp">
+                <i class="fa fa-chevron-left"></i> DVWA实验wp
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
+  </article>
 
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -740,8 +725,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -840,6 +834,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#8086"><span class="nav-number">1.</span> <span class="nav-text">8086</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实模式"><span class="nav-number">2.</span> <span class="nav-text">实模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保护模式"><span class="nav-number">3.</span> <span class="nav-text">保护模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正片开始"><span class="nav-number">4.</span> <span class="nav-text">正片开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实模与保护模式下的逻辑地址"><span class="nav-number">4.1.</span> <span class="nav-text">实模与保护模式下的逻辑地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保护模式下的分段"><span class="nav-number">4.2.</span> <span class="nav-text">保护模式下的分段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#段选择子"><span class="nav-number">4.2.1.</span> <span class="nav-text">段选择子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GDT（全局描述符表）"><span class="nav-number">4.2.2.</span> <span class="nav-text">GDT（全局描述符表）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GDTR"><span class="nav-number">4.2.3.</span> <span class="nav-text">GDTR</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分段机制总结"><span class="nav-number">4.2.4.</span> <span class="nav-text">分段机制总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保护模式下的分页"><span class="nav-number">4.3.</span> <span class="nav-text">保护模式下的分页</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#页"><span class="nav-number">4.3.1.</span> <span class="nav-text">页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页表"><span class="nav-number">4.3.2.</span> <span class="nav-text">页表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页目录"><span class="nav-number">4.3.3.</span> <span class="nav-text">页目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CR3寄存器"><span class="nav-number">4.3.4.</span> <span class="nav-text">CR3寄存器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页机制总结"><span class="nav-number">4.3.5.</span> <span class="nav-text">分页机制总结</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1001,6 +1012,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -1046,6 +1061,8 @@
 
 
 
+
+  
 
 
   
