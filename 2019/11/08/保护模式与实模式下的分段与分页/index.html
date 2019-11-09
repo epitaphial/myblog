@@ -96,13 +96,13 @@
 
 
 
-  <meta name="description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即： $$2^{20}=1048576$$ 由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：$$物">
+  <meta name="description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即：  2^{20}=1048576由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：  物理地址">
 <meta name="keywords" content="os">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实模式与保护模式下的分段与分页">
 <meta property="og:url" content="https://lpc.wiki/2019/11/08/保护模式与实模式下的分段与分页/index.html">
 <meta property="og:site_name" content="Curled">
-<meta property="og:description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即： $$2^{20}=1048576$$ 由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：$$物">
+<meta property="og:description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即：  2^{20}=1048576由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：  物理地址">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLE7t.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLknA.png">
@@ -113,10 +113,10 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLA0I.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLZAP.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/11/09/MeLetf.png">
-<meta property="og:updated_time" content="2019-11-09T05:12:52.039Z">
+<meta property="og:updated_time" content="2019-11-09T05:24:55.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实模式与保护模式下的分段与分页">
-<meta name="twitter:description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即： $$2^{20}=1048576$$ 由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：$$物">
+<meta name="twitter:description" content="在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。 8086Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即：  2^{20}=1048576由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：  物理地址">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/11/09/MeLE7t.png">
 
 
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-11-09 13:12:52" itemprop="dateModified" datetime="2019-11-09T13:12:52+08:00">2019-11-09</time>
+                <time title="Modified: 2019-11-09 13:24:55" itemprop="dateModified" datetime="2019-11-09T13:24:55+08:00">2019-11-09</time>
               
             
           </span>
@@ -460,8 +460,10 @@
       
         <p>在正式开始讨论实模式与保护模式下分段与分页机制前，先介绍一下几个专有名词。</p>
 <h2 id="8086"><a href="#8086" class="headerlink" title="8086"></a>8086</h2><p>Intel8086是英特尔公司于1978年发表的第一款16位微处理器。所有的内部寄存器以及内外部数据总线都是16位宽，因此是完全的16位微处理器。有20位外部地址总线，所以物理地址的空间为1MiB，即：</p>
-<p>$$<br>2^{20}=1048576<br>$$</p>
-<p>由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：<br>$$<br>物理地址 = 段基址&lt;&lt;4+偏移地址<br>$$<br>8086寄存器组包括：</p>
+<script type="math/tex; mode=display">
+2^{20}=1048576</script><p>由于内部寄存器是16位，所以对1M地址空间寻址时采取段寻址方式，即：</p>
+<script type="math/tex; mode=display">
+物理地址 = 段基址<<4+偏移地址</script><p>8086寄存器组包括：</p>
 <p>主寄存器：</p>
 <ul>
 <li>AX（累加器），有高八位AH和低八位AL</li>
@@ -1395,6 +1397,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 

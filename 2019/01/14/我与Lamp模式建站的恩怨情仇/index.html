@@ -484,7 +484,7 @@ sudo yum install upgrade
 <pre><code>use mysql;
 select user,plugin from user ;
 </code></pre><p>我们可以看到，列出来的用户里面，加密方式为caching_sha2_password<br>Typecho默认数据库连接不支持sha2加密方式，我们改为native加密模式</p>
-<pre><code>ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;
+<pre><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;;
 </code></pre><p>然后修改密码</p>
 <p>第一个坑顺利解决</p>
 <p>安装完网站，进后台，进行各种设置，这时候，看到我们的域名<br><a href="http://wutongdeng.cn" target="_blank" rel="noopener">http://wutongdeng.cn</a><br>作为一名资深强迫症患者，chrome和火狐再给我丢一个不安全，就十分难受。<br>不用说，https化。<br>上次搭建因为mysql版本问题没能成功解决（一个很奇怪的报错条件）<br>开始。<br>我首先选择的是certbot，一个免费证书颁发网站（白嫖党上线）。<br>网站虽然是英文的，但是有点英语基础安装起来没有困难，况且每一步的安装命令都给了，我们ctrl c ctrl v就能解决（额好吧，linux应该shift insert）。抱着这种心态，一路配置下去，突然卡在了</p>
@@ -1245,6 +1245,13 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
