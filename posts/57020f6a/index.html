@@ -100,17 +100,25 @@
 
 
 
-  <meta name="description" content="blog">
-<meta name="keywords" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Curled的避风港">
-<meta property="og:url" content="https://lpc.wiki/archives/page/2/index.html">
+  <meta name="description" content="题目来源：BUUCTF上一道强网杯的原题——《随便注》题目链接：http://web16.buuoj.cn/  题目是一个查询，输入1，2有回显，说明存在column1，2. 输入1&amp;#39;报错，初步判断应该是sql注入。  输入1&amp;#39;;show tables发现有两个表，并且存在堆叠注入漏洞。  输入1&amp;#39;;show column from 1919810931114514，发现无">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一道存储过程绕过的SQL注入题">
+<meta property="og:url" content="https://lpc.wiki/posts/57020f6a/index.html">
 <meta property="og:site_name" content="Curled的避风港">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="题目来源：BUUCTF上一道强网杯的原题——《随便注》题目链接：http://web16.buuoj.cn/  题目是一个查询，输入1，2有回显，说明存在column1，2. 输入1&amp;#39;报错，初步判断应该是sql注入。  输入1&amp;#39;;show tables发现有两个表，并且存在堆叠注入漏洞。  输入1&amp;#39;;show column from 1919810931114514，发现无">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/04/ZUq5MF.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/04/ZUq7Z9.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/04/ZUqIr4.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/04/ZUqoqJ.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/04/ZULMon.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/04/ZUqhxU.md.png">
+<meta property="og:updated_time" content="2020-01-13T02:39:54.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Curled的避风港">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="一道存储过程绕过的SQL注入题">
+<meta name="twitter:description" content="题目来源：BUUCTF上一道强网杯的原题——《随便注》题目链接：http://web16.buuoj.cn/  题目是一个查询，输入1，2有回显，说明存在column1，2. 输入1&amp;#39;报错，初步判断应该是sql注入。  输入1&amp;#39;;show tables发现有两个表，并且存在堆叠注入漏洞。  输入1&amp;#39;;show column from 1919810931114514，发现无">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/07/04/ZUq5MF.md.png">
 
 
 
@@ -118,7 +126,7 @@
 
   
   
-  <link rel="canonical" href="https://lpc.wiki/archives/page/2/">
+  <link rel="canonical" href="https://lpc.wiki/posts/57020f6a/">
 
 
 
@@ -128,7 +136,7 @@
   };
 </script>
 
-  <title>Archive | Curled的避风港</title>
+  <title>一道存储过程绕过的SQL注入题 | Curled的避风港</title>
   
 
 
@@ -176,7 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,7 +245,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -268,19 +276,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -334,227 +329,231 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lpc.wiki/posts/57020f6a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Curled">
+      <meta itemprop="description" content="blog">
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/04/18/ESuhtS.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Curled的避风港">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">一道存储过程绕过的SQL注入题
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-04 21:28:23" itemprop="dateCreated datePublished" datetime="2019-07-04T21:28:23+08:00">2019-07-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-01-13 10:39:54" itemprop="dateModified" datetime="2020-01-13T10:39:54+08:00">2020-01-13</time>
+              
+            
+          </span>
+
           
-        
-        Um..! 15 posts in total. Keep on posting.
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/a61f540e/" itemprop="url">
             
-              <span itemprop="name">汇编语言学习心得（一）：CPU,寄存器</span>
             
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-03T16:58:25+08:00" content="2019-02-03">
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/a963a93d/" itemprop="url">
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
             
-              <span itemprop="name">年</span>
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/posts/57020f6a/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/57020f6a/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-30T23:31:15+08:00" content="2019-01-30">
-          01-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/f097a52d/" itemprop="url">
-            
-              <span itemprop="name">我与Lamp模式建站的恩怨情仇</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-14T21:19:05+08:00" content="2019-01-14">
-          01-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/59ed6fb0/" itemprop="url">
-            
-              <span itemprop="name">旧曾谙</span>
-            
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-19T01:16:40+08:00" content="2018-11-19">
-          11-19
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/f144e2e5/" itemprop="url">
-            
-              <span itemprop="name">壁炉与梦境</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-31T10:40:16+08:00" content="2018-10-31">
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h2 id="题目来源：BUUCTF上一道强网杯的原题——《随便注》"><a href="#题目来源：BUUCTF上一道强网杯的原题——《随便注》" class="headerlink" title="题目来源：BUUCTF上一道强网杯的原题——《随便注》"></a>题目来源：BUUCTF上一道强网杯的原题——《随便注》</h2><p>题目链接：<a href="http://web16.buuoj.cn/" target="_blank" rel="noopener">http://web16.buuoj.cn/</a></p>
+<p><img src="https://s2.ax1x.com/2019/07/04/ZUq5MF.md.png" alt></p>
+<p>题目是一个查询，输入1，2有回显，说明存在column1，2.</p>
+<p>输入<code>1&#39;</code>报错，初步判断应该是sql注入。</p>
+<p><img src="https://s2.ax1x.com/2019/07/04/ZUq7Z9.md.png" alt></p>
+<p>输入<code>1&#39;;show tables</code>发现有两个表，并且存在堆叠注入漏洞。</p>
+<p><img src="https://s2.ax1x.com/2019/07/04/ZUqIr4.md.png" alt></p>
+<p>输入<code>1&#39;;show column from 1919810931114514</code>，发现无回显，经查询发现数字字符串需加上反引号。可以看到flag column在该表内。</p>
+<p><img src="https://s2.ax1x.com/2019/07/04/ZUqoqJ.md.png" alt></p>
+<p>直接上select想拿flag，发现被过滤下来了。</p>
+<p>无头绪中，发现该大佬的博客，地址：<a href="https://blog.csdn.net/weixin_37839711/article/details/81562550，学会了存储过程绕过。" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37839711/article/details/81562550，学会了存储过程绕过。</a></p>
+<p>于是最终payload：<code>1&#39;;sEt @a=0x73656c656374202a2066726f6d20603139313938313039333131313435313460;prepare ctf from @a;execute ctf;</code></p>
+<p><img src="https://s2.ax1x.com/2019/07/04/ZULMon.md.png" alt></p>
+<p>存储过程绕过的原理，就是用prepare将from后面的语句暂存，该语句可以是16进制的，也可以含有参数。set 可以存储一个数值到变量里面，execute执行prepare的语句。</p>
+<p>所以这里我们将select * from `1919810931114514`转换为16进制，然后放进set的变量里，prepare后excecute，成功执行。</p>
+<p>为了进一步验证16进制可以执行的猜想，我们进一步测试了另外一个表words，然后……</p>
+<p><img src="https://s2.ax1x.com/2019/07/04/ZUqhxU.md.png" alt></p>
+<p>发现了彩蛋（逃</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CTF/" rel="tag"># CTF</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/438602c/" rel="next" title="lpc的pwnable.kr日记(2)">
+                <i class="fa fa-chevron-left"></i> lpc的pwnable.kr日记(2)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/f14632c3/" rel="prev" title="2019网络与信息安全领域专项赛wp">
+                2019网络与信息安全领域专项赛wp <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-  </nav>
+  </article>
 
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -574,8 +573,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -674,6 +682,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目来源：BUUCTF上一道强网杯的原题——《随便注》"><span class="nav-number">1.</span> <span class="nav-text">题目来源：BUUCTF上一道强网杯的原题——《随便注》</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -840,6 +865,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -885,6 +914,8 @@
 
 
 
+
+  
 
 
   

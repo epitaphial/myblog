@@ -100,17 +100,18 @@
 
 
 
-  <meta name="description" content="blog">
+  <meta name="description" content="汇编语言是怎么产生的？汇编语言是机器指令的助记符，与机器指令一一对应。而对不同的CPU来说有不同的汇编指令集。显然，机器语言虽然高效，但是难以让人理解，可读性和查错性都不强，所以才出现了中间语言——汇编语言。 寄存器是CPU中存储数据的器件，一个CPU可以有多个寄存器。寄存器又有自己的代号，如AX,BX。说到数据，在内存和磁盘上，指令和数据的区别并不大，本质上都是作为二进制存储，但是CPU工作的时">
 <meta name="keywords" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Curled的避风港">
-<meta property="og:url" content="https://lpc.wiki/archives/page/2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编语言学习心得（一）：CPU,寄存器">
+<meta property="og:url" content="https://lpc.wiki/posts/a61f540e/index.html">
 <meta property="og:site_name" content="Curled的避风港">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="汇编语言是怎么产生的？汇编语言是机器指令的助记符，与机器指令一一对应。而对不同的CPU来说有不同的汇编指令集。显然，机器语言虽然高效，但是难以让人理解，可读性和查错性都不强，所以才出现了中间语言——汇编语言。 寄存器是CPU中存储数据的器件，一个CPU可以有多个寄存器。寄存器又有自己的代号，如AX,BX。说到数据，在内存和磁盘上，指令和数据的区别并不大，本质上都是作为二进制存储，但是CPU工作的时">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-13T02:39:54.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Curled的避风港">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="汇编语言学习心得（一）：CPU,寄存器">
+<meta name="twitter:description" content="汇编语言是怎么产生的？汇编语言是机器指令的助记符，与机器指令一一对应。而对不同的CPU来说有不同的汇编指令集。显然，机器语言虽然高效，但是难以让人理解，可读性和查错性都不强，所以才出现了中间语言——汇编语言。 寄存器是CPU中存储数据的器件，一个CPU可以有多个寄存器。寄存器又有自己的代号，如AX,BX。说到数据，在内存和磁盘上，指令和数据的区别并不大，本质上都是作为二进制存储，但是CPU工作的时">
 
 
 
@@ -118,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://lpc.wiki/archives/page/2/">
+  <link rel="canonical" href="https://lpc.wiki/posts/a61f540e/">
 
 
 
@@ -128,7 +129,7 @@
   };
 </script>
 
-  <title>Archive | Curled的避风港</title>
+  <title>汇编语言学习心得（一）：CPU,寄存器 | Curled的避风港</title>
   
 
 
@@ -176,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,7 +238,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -268,19 +269,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -334,227 +322,220 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lpc.wiki/posts/a61f540e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Curled">
+      <meta itemprop="description" content="blog">
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/04/18/ESuhtS.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Curled的避风港">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">汇编语言学习心得（一）：CPU,寄存器
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-03 16:58:25" itemprop="dateCreated datePublished" datetime="2019-02-03T16:58:25+08:00">2019-02-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-01-13 10:39:54" itemprop="dateModified" datetime="2020-01-13T10:39:54+08:00">2020-01-13</time>
+              
+            
+          </span>
+
           
-        
-        Um..! 15 posts in total. Keep on posting.
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/a61f540e/" itemprop="url">
             
-              <span itemprop="name">汇编语言学习心得（一）：CPU,寄存器</span>
             
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-03T16:58:25+08:00" content="2019-02-03">
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/a963a93d/" itemprop="url">
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
             
-              <span itemprop="name">年</span>
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/posts/a61f540e/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a61f540e/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-30T23:31:15+08:00" content="2019-01-30">
-          01-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/f097a52d/" itemprop="url">
-            
-              <span itemprop="name">我与Lamp模式建站的恩怨情仇</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-14T21:19:05+08:00" content="2019-01-14">
-          01-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/59ed6fb0/" itemprop="url">
-            
-              <span itemprop="name">旧曾谙</span>
-            
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-19T01:16:40+08:00" content="2018-11-19">
-          11-19
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/posts/f144e2e5/" itemprop="url">
-            
-              <span itemprop="name">壁炉与梦境</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-31T10:40:16+08:00" content="2018-10-31">
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p>汇编语言是怎么产生的？汇编语言是机器指令的助记符，与机器指令一一对应。而对不同的CPU来说有不同的汇编指令集。显然，机器语言虽然高效，但是难以让人理解，可读性和查错性都不强，所以才出现了中间语言——汇编语言。</p>
+<p>寄存器是CPU中存储数据的器件，一个CPU可以有多个寄存器。寄存器又有自己的代号，如AX,BX。说到数据，在内存和磁盘上，指令和数据的区别并不大，本质上都是作为二进制存储，但是CPU工作的时候，指令和数据则有不同的意义。</p>
+<p>存储器包含若干个存储单元，每个单元从0开始编号。一个单元存储8bit，也就是一个字节Byte。但是在量度存储器的容量时，常常用字节作为最小的单位。CPU在读写存储器时，是按照：寻址——选择控制——读写的顺序进行工作的。而参与这一过程的主角——三条线：地址线、数据总线、控制总线，它们的作用分别如下：</p>
+<blockquote>
+<p>地址线：CPU含有地址线的数量称为地址总线的宽度，于是寻址的范围就是2的宽度次方个存储单元。<br>数据总线：一根数据总线对应一个二进制位（1bit），8根数据总线可以传输一个字节。<br>控制总线：宽度决定CPU对外部器件的控制能力。</p>
+</blockquote>
+<p>而可寻内存单元构成的叫做CPU的内存地址空间，分别由两个字节组成：高位字节和低位字节。</p>
+<p>前面我们谈到不同的CPU对应不同的汇编指令，以及不同的寄存器数量。在这里我们着重介绍一种重要的CPU：8086CPU。</p>
+<p>8086CPU由20位地址总线组成，具有1MB寻址能力。16位结构，一次性处理传输暂存的数据位16位。内部则用两个16位地址（段地址和偏移地址）通过地址加法器合成一个20位的物理地址。合成方式为：16*段地址+偏移地址。充分体现了用两个少位单元代替多位单元的思想。同时，正因为这个物理地址一个合成的地址，所以可以有不同的段地址和偏移地址的组合方式。</p>
+<p>段地址和偏移地址是怎样暂时存储的呢？这里有两个重要的寄存器：CS寄存器和IP寄存器。前者储存段地址，称为代码段寄存器，后者储存偏移地址，称为指令指针寄存器。所以，我们基本上可以想象出执行一条指令的全过程了：CS和IP中的值送入地址加法器，计算出物理地址：16*CS+IP，然后用得到的物理地址传入输入输出控制器，通过地址总线寻找到指令的首地址，然后通过数据总线送回来，再送入指令缓冲器，这时候，我们的IP寄存器加上代码段长度的地址长度，指向下一个指令后，再执行当前指令，执行完后进入下一个循环，周而复始。</p>
+<p>由此，我们知道，读取指令，不过就是改变CS和IP的值，使物理地址指向我们想要读取的指令集。那么怎么改变CS和IP的值呢？用MOV指令可以吗？</p>
+<p>我们知道，MOV可以修改寄存器AX，BX等寄存器的值，然而，在8086CPU中，MOV指令不能直接修改CS、IP内容，因为MOV指令叫做传送指令，只能通过执行指令前完成IP加上代码段长度这一个自增过程实现间接改变IP寄存器的值。能直接修改CS,IP的指令叫做转移指令，如JMP。 格式为JMP 段地址：偏移地址。</p>
+<p>若仅仅修改IP内容，就用jmp 寄存器（AX,BX） 这一格式的语句。寄存器的值作为IP的新值。所以从某种意义上来说，jmp ax等同于mov ip ax。</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/a963a93d/" rel="next" title="年">
+                <i class="fa fa-chevron-left"></i> 年
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/5a38389c/" rel="prev" title="优美的舞姿--探索正则表达式（一）：字符组、量词初步">
+                优美的舞姿--探索正则表达式（一）：字符组、量词初步 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-  </nav>
+  </article>
 
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -840,6 +821,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -885,6 +870,8 @@
 
 
 
+
+  
 
 
   
