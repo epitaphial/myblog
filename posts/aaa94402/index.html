@@ -108,20 +108,18 @@
 <meta property="og:site_name" content="Nowhere Town">
 <meta property="og:description" content="Easy Crack这道题是最简单的一道题，运行程序，是一个windows窗体程序，peid查壳发现没有加壳。  要求输入序列号然后点？？验证，我们随意输入字符串，发现弹出incorrect password的提示。 拖进ida里面搜索字符串，f5大法，找到关键函数，如下：  12345678910111213141516171819int __cdecl sub_401080(HWND hDlg">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://reversing.kr/images/env/windows.png">
 <meta property="og:image" content="https://lpc.wiki/posts/aaa94402/1.png">
 <meta property="og:image" content="https://lpc.wiki/posts/aaa94402/2.png">
-<meta property="og:image" content="http://reversing.kr/images/env/windows.png">
 <meta property="og:image" content="https://lpc.wiki/posts/aaa94402/3.png">
-<meta property="og:image" content="https://lpc.wiki/posts/aaa94402/myblog/source/_posts/reverse-kr-daily/4.png">
+<meta property="og:image" content="https://lpc.wiki/posts/aaa94402/4.png">
 <meta property="og:image" content="https://lpc.wiki/posts/aaa94402/5.png">
 <meta property="og:image" content="https://lpc.wiki/posts/aaa94402/6.png">
 <meta property="og:image" content="https://lpc.wiki/posts/aaa94402/7.png">
-<meta property="og:updated_time" content="2020-07-13T06:27:04.108Z">
+<meta property="og:updated_time" content="2020-07-13T06:33:28.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="reversing.kr daily">
 <meta name="twitter:description" content="Easy Crack这道题是最简单的一道题，运行程序，是一个windows窗体程序，peid查壳发现没有加壳。  要求输入序列号然后点？？验证，我们随意输入字符串，发现弹出incorrect password的提示。 拖进ida里面搜索字符串，f5大法，找到关键函数，如下：  12345678910111213141516171819int __cdecl sub_401080(HWND hDlg">
-<meta name="twitter:image" content="http://reversing.kr/images/env/windows.png">
+<meta name="twitter:image" content="https://lpc.wiki/posts/aaa94402/1.png">
 
 
 
@@ -391,7 +389,7 @@
                 
               
 
-              <time title="Created: 2020-07-13 14:23:07 / Modified: 14:27:04" itemprop="dateCreated datePublished" datetime="2020-07-13T14:23:07+08:00">2020-07-13</time>
+              <time title="Created: 2020-07-13 14:23:07 / Modified: 14:33:28" itemprop="dateCreated datePublished" datetime="2020-07-13T14:23:07+08:00">2020-07-13</time>
             
 
             
@@ -450,17 +448,17 @@
       
 
       
-        <h2 id="Easy-Crack"><a href="#Easy-Crack" class="headerlink" title="Easy Crack"></a><img src="http://reversing.kr/images/env/windows.png" alt="img"><a href="http://reversing.kr/download.php?n=1" target="_blank" rel="noopener">Easy Crack</a></h2><p>这道题是最简单的一道题，运行程序，是一个windows窗体程序，peid查壳发现没有加壳。</p>
+        <h2 id="Easy-Crack"><a href="#Easy-Crack" class="headerlink" title="Easy Crack"></a><a href="http://reversing.kr/download.php?n=1" target="_blank" rel="noopener">Easy Crack</a></h2><p>这道题是最简单的一道题，运行程序，是一个windows窗体程序，peid查壳发现没有加壳。</p>
 <p><img src="/posts/aaa94402/1.png" alt="image-20200713134419305"></p>
 <p>要求输入序列号然后点？？验证，我们随意输入字符串，发现弹出incorrect password的提示。</p>
 <p>拖进ida里面搜索字符串，f5大法，找到关键函数，如下：</p>
 <p><img src="/posts/aaa94402/2.png" alt="image-20200713134600523" style="zoom: 200%;"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __<span class="function">cdecl <span class="title">sub_401080</span><span class="params">(HWND hDlg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  CHAR String; <span class="comment">// [esp+4h] [ebp-64h]</span></span><br><span class="line">  <span class="keyword">char</span> v3; <span class="comment">// [esp+5h] [ebp-63h]</span></span><br><span class="line">  <span class="keyword">char</span> v4; <span class="comment">// [esp+6h] [ebp-62h]</span></span><br><span class="line">  <span class="keyword">char</span> v5; <span class="comment">// [esp+8h] [ebp-60h]</span></span><br><span class="line">  __int16 v6; <span class="comment">// [esp+65h] [ebp-3h]</span></span><br><span class="line">  <span class="keyword">char</span> v7; <span class="comment">// [esp+67h] [ebp-1h]</span></span><br><span class="line"></span><br><span class="line">  String = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">memset</span>(&amp;v3, <span class="number">0</span>, <span class="number">0x60</span>u);</span><br><span class="line">  v6 = <span class="number">0</span>;</span><br><span class="line">  v7 = <span class="number">0</span>;</span><br><span class="line">  GetDlgItemTextA(hDlg, <span class="number">1000</span>, &amp;String, <span class="number">100</span>);</span><br><span class="line">  <span class="keyword">if</span> ( v3 != <span class="number">97</span> || <span class="built_in">strncmp</span>(&amp;v4, a5y, <span class="number">2u</span>) || <span class="built_in">strcmp</span>(&amp;v5, aR3versing) || String != <span class="number">69</span> )</span><br><span class="line">    <span class="keyword">return</span> MessageBoxA(hDlg, aIncorrectPassw, Caption, <span class="number">0x10</span>u);</span><br><span class="line">  MessageBoxA(hDlg, Text, Caption, <span class="number">0x40</span>u);</span><br><span class="line">  <span class="keyword">return</span> EndDialog(hDlg, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>显然，调用了函数GetDlgItemTextA拿到text控件内的值，然后做了一个简单的判断，如果不满足if内的条件，就输出incorrect。而if内的条件都是内存内的常量字符串或字符，直接将String+v3+v4+v5拼接即可得到flag。</p>
-<h2 id="Easy-Keygen"><a href="#Easy-Keygen" class="headerlink" title="Easy Keygen"></a><img src="http://reversing.kr/images/env/windows.png" alt="img"><a href="http://reversing.kr/download.php?n=2" target="_blank" rel="noopener">Easy Keygen</a></h2><p>这道题也比较容易，下载下来一个压缩包，包含一个exe和一个txt，txt内告诉了你序列号，让你找到序列号对应的用户名。</p>
+<h2 id="Easy-Keygen"><a href="#Easy-Keygen" class="headerlink" title="Easy Keygen"></a><a href="http://reversing.kr/download.php?n=2" target="_blank" rel="noopener">Easy Keygen</a></h2><p>这道题也比较容易，下载下来一个压缩包，包含一个exe和一个txt，txt内告诉了你序列号，让你找到序列号对应的用户名。</p>
 <p><img src="/posts/aaa94402/3.png" alt="image-20200713141004707"></p>
 <p>运行程序，发现让分别输入序列号和用户名：</p>
-<p><img src="/posts/aaa94402/myblog\source\_posts\reverse-kr-daily\4.png" alt="image-20200713141103496"></p>
+<p><img src="/posts/aaa94402/4.png" alt="image-20200713141103496"></p>
 <p>查壳发现未加密，拖进ida搜索字符串Wrong，定位到_main函数下。</p>
 <p><img src="/posts/aaa94402/5.png" alt="image-20200713141156483"></p>
 <p>完整代码如下（因为便于观看部分变量被我换了名儿）：</p>
